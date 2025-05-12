@@ -14,17 +14,21 @@ const Tickets = () => {
             <p className="text-white text-lg md:text-xl font-montserrat">
               May 2026
             </p>
+            <div className="flex items-center text-white py-2">
+              <MapPin className="w-5 h-5 text-teamm-gold mr-2" />
+              <span className="font-montserrat">COCA, St. Louis, MO</span>
+            </div>
           </div>
           
           <div className="md:w-1/3 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-            <div className="flex items-center text-white">
+            {/* <div className="flex items-center text-white">
               <MapPin className="w-5 h-5 text-teamm-gold mr-2" />
               <span className="font-montserrat">St. Louis, MO</span>
             </div>
             <div className="flex items-center text-white">
               <Clock className="w-5 h-5 text-teamm-gold mr-2" />
               <span className="font-montserrat">2h 15m</span>
-            </div>
+            </div> */}
           </div>
           
           <div className="md:w-1/3 flex justify-center md:justify-end">

@@ -4,6 +4,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Protest_Riot } from 'next/font/google';
 import Image from 'next/image';
+import { Button } from './ui/button';
+import Link from 'next/link';
 
 const protestRiot = Protest_Riot({
   subsets: ['latin'],
@@ -36,21 +38,26 @@ const SynopsisSection: React.FC = () => {
 
       <div className="max-w-5xl mx-auto">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold mb-12 leading-tight text-left flex flex-wrap gap-2"
+          className="text-4xl md:text-5xl font-bold mb-12 leading-tight text-center flex flex-wrap gap-2 justify-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          {/* <span className="uppercase text-shadow text-shadow-amber-300 text-shadow-sm">Eight</span>{' '}
-          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>strangers.</span>{' '}
-          <span className="uppercase text-shadow text-shadow-amber-300 text-shadow-sm">One</span>{' '}
-          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>support group.</span>{' '}
-          <br /> */}
-          <span className="uppercase text-shadow text-shadow-amber-300 text-shadow-sm">A powerful journey of</span>{' '}
-          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>healing</span>,{' '}
-          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>connection</span>,{' '}
-          <span className="uppercase text-shadow text-shadow-amber-300 text-shadow-sm">and</span>{' '}
-          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>redemption.</span>
+          <span className="uppercase text-shadow text-shadow-amber-300 text-shadow-sm">
+            A powerful journey of
+          </span>{' '}
+          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>
+            healing
+          </span>,{' '}
+          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>
+            connection
+          </span>,{' '}
+          <span className="uppercase text-shadow text-shadow-amber-300 text-shadow-sm">
+            and
+          </span>{' '}
+          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>
+            redemption.
+          </span>
         </motion.h2>
 
         <motion.div
@@ -68,6 +75,18 @@ const SynopsisSection: React.FC = () => {
           </p>
         </motion.div>
       </div>
+      
+      <div className="flex justify-center mt-8">
+        <Button className="bg-teamm-gold hover:bg-teamm-gold/90 text-black font-oswald uppercase tracking-wider text-lg px-8 py-6 font-bold w-fit">
+          <Link
+          
+            href="/about"
+          >
+            READ MORE
+          </Link>
+        </Button>
+      </div>
+      
     </section>
   );
 };

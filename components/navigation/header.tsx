@@ -19,7 +19,7 @@ function Header() {
           <NavLink href="/">Home</NavLink>
           <NavLink href="/about">About</NavLink>
           <NavLink href="/team">Cast + Creative</NavLink>
-          <NavLink href="/services">Phil Woodmore</NavLink>
+          <NavLink href="/phil-woodmore">Phil Woodmore</NavLink>
         </div>
       </div>
     </div>
