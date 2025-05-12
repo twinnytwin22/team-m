@@ -1,25 +1,15 @@
 @import "tailwindcss";
-@variant dark (&:where(.dark, .dark *));
 
-@theme {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* @variant dark (&:where(.dark, .dark *)); */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@layer base {
+/* @layer base {
   .dark,
   [data-theme="dark"] {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
@@ -147,9 +137,18 @@ body {
   .border-teamm-gold {
     border-color: #f7941d;
   }
+  .border-teamm-gold-light {
+    border-color: #f7ae1d;
+  }
   .border-teamm-black {
     border-color: #000000;
   }
+  .protest-riot {
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+      
 }
 
 @layer components {

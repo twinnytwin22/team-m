@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, MapPin } from "lucide-react";
+import { Clock, MapPin } from "lucide-react";
+import Link from "next/link";
 
 const Tickets = () => {
   return (
@@ -7,7 +8,7 @@ const Tickets = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="md:w-1/3 text-center md:text-left">
-            <h2 className="text-teamm-gold text-2xl md:text-3xl font-oswald uppercase tracking-wider mb-2">
+            <h2 className="text-teamm-gold text-2xl md:text-3xl font-oswald uppercase tracking-wider mb-2 font-bold">
               WORLD PREMIERE
             </h2>
             <p className="text-white text-lg md:text-xl font-montserrat">
@@ -27,8 +28,9 @@ const Tickets = () => {
           </div>
           
           <div className="md:w-1/3 flex justify-center md:justify-end">
-            <Button className="bg-teamm-gold hover:bg-teamm-gold/90 text-black font-oswald uppercase tracking-wider text-lg px-8 py-6">
-              Reserve Tickets
+            <Button className="bg-teamm-gold hover:bg-teamm-gold/90 text-black font-oswald uppercase tracking-wider text-lg px-8 py-6 font-bold">
+              
+              <Link target="_blank" href={'https://mococaweb.myvscloud.com/webtrac/web/search.html?keyword=team+m&begindate=05%2F12%2F2026&enddate=08%2F31%2F2026'}> Reserve Tickets</Link>
             </Button>
           </div>
         </div>

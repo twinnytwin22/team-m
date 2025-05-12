@@ -1,7 +1,8 @@
+import React from 'react';
 export const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <a
     href={href}
-    className="text-teamm-gold hover:text-white transition-colors duration-200 font-montserrat uppercase tracking-wide font-medium"
+    className="text-white duration-200 ease-in-out font-oswald uppercase tracking-wide font-semibold hover:underline underline-offset-5 decoration-3"
   >
     {children}
   </a>

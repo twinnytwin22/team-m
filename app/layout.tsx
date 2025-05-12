@@ -6,8 +6,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "next-themes";
 import Header from "@/components/navigation/header";
-import Head from "next/head";
-import Script from "next/script";
+
+import Footer from "@/components/navigation/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,16 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* <Head>
-      <Script 
-      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
-      strategy="beforeInteractive" 
-      />
-      <Script 
-      src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"       
-      strategy="beforeInteractive" 
-      />
-      </Head> */}
+ 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -51,6 +42,7 @@ export default function RootLayout({
             <Header />
             <div className="pt-20 overflow-x-hidden">
               {children}
+              <Footer/>
             </div>
           </TooltipProvider>
         </ThemeProvider>

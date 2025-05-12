@@ -2,51 +2,71 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Protest_Riot } from 'next/font/google';
+import Image from 'next/image';
+
+const protestRiot = Protest_Riot({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-protest-riot',
+});
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
-  show: (i: number) => ({
+  visible: {
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.3, duration: 0.8, ease: 'easeOut' },
-  }),
+    transition: { duration: 1, ease: 'easeOut' },
+  },
 };
-
-const lines = [
-  "In a quiet church basement in the fictional town of Macey, Indiana, eight strangers gather every week for a support group known simply as Team M.",
-  "What begins as a series of guarded conversations slowly unravels into a powerful exploration of grief, identity, mental health, and healing.",
-  "As secrets surface and tensions rise, one truth becomes clear: these eight individuals are more connected than they appear.",
-  "Team M tells the story of Milo—a young man fighting for peace amidst a mind divided—and the 'team' that holds him together.",
-  "This gripping and deeply human musical invites audiences into a world of vulnerability, laughter, and redemption.",
-  "It asks us: What does healing really look like when the world tells you to hide?"
-];
 
 const SynopsisSection: React.FC = () => {
   return (
-    <section className="bg-[#114F2C] text-white py-28 px-6 md:px-10">
-      <div className="max-w-3xl mx-auto">
+    <section className="relative bg-gradient-to-br from-[#00913f] via-[#106e39] to-[#0d4024] text-white py-28 px-6 md:px-10 before:absolute before:inset-0 before:bg-gradient-to-tr before:from-black/10 before:to-transparent">
+      
+      <div className="mb-5">
+        <Image
+          src="/teamm-logo-m@2x.png"
+          alt="Team M Logo"
+          width={500}
+          height={300}
+          className="w-52 px-10 mx-auto mb-16"
+        />
+      </div>
+
+      <div className="max-w-5xl mx-auto">
         <motion.h2
-          className="text-4xl md:text-5xl font-semibold mb-12 leading-tight text-center"
+          className="text-4xl md:text-5xl font-bold mb-12 leading-tight text-left flex flex-wrap gap-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          SYNOPSIS
+          {/* <span className="uppercase text-shadow text-shadow-amber-300 text-shadow-sm">Eight</span>{' '}
+          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>strangers.</span>{' '}
+          <span className="uppercase text-shadow text-shadow-amber-300 text-shadow-sm">One</span>{' '}
+          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>support group.</span>{' '}
+          <br /> */}
+          <span className="uppercase text-shadow text-shadow-amber-300 text-shadow-sm">A powerful journey of</span>{' '}
+          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>healing</span>,{' '}
+          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>connection</span>,{' '}
+          <span className="uppercase text-shadow text-shadow-amber-300 text-shadow-sm">and</span>{' '}
+          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>redemption.</span>
         </motion.h2>
 
-        {lines.map((line, i) => (
-          <motion.p
-            key={i}
-            custom={i}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="text-lg md:text-xl leading-relaxed mb-6 text-white/90"
-          >
-            {line}
-          </motion.p>
-        ))}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="space-y-6"
+        >
+          <p className="text-lg md:text-xl leading-relaxed text-white/90">
+            In a quiet church basement in the fictional town of Macey, Indiana, eight strangers gather each week for a support group known simply as Team M. What starts as guarded conversation slowly unravels into a deeply human exploration of grief, identity, mental health, and healing. As secrets rise to the surface and tensions begin to simmer, one truth becomes undeniable: these eight lives are far more connected than they appear.
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed text-white/90">
+            At the center is Milo—a young man navigating the chaos of a divided mind—anchored by the “team” that holds him together. Set against a powerful original score that blends gospel, pop, rock, and musical theater, <strong>Team M</strong> invites audiences into a world of vulnerability, laughter, and unexpected redemption. It asks us: What does healing really look like when the world tells you to hide?
+          </p>
+        </motion.div>
       </div>
     </section>
   );

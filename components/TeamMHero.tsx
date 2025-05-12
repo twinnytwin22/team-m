@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function TeamMHero() {
   return (
@@ -20,15 +21,16 @@ function TeamMHero() {
           height={100}
           className="h-auto w-auto mx-auto mb-4"
         />
-        <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
-          A new musical about grief, healing, and the strength of community.
+        <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 uppercase scale-125 font-black">
+          A new musical <br/>by <span className='text-xl md:text-2xl'>Phil Woodmore</span>
         </p>
-        <a
-          href="/buy-tickets"
-          className="bg-teamm-gold text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+        <Link
+          href="https://mococaweb.myvscloud.com/webtrac/web/search.html?keyword=team+m&begindate=05%2F12%2F2026&enddate=08%2F31%2F2026"
+          target="_blank"
+          className="bg-teamm-gold text-black font-bold py-3 px-6 rounded-lg transition duration-300 uppercase font-oswald"
         >
           Reserve Tickets
-        </a>
+        </Link>
       </div>
     </div>
   );
