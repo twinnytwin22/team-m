@@ -13,13 +13,13 @@ function Footer() {
         <div className="flex-1 space-y-2 text-center lg:text-left lg:space-x-4 text-3xl">
           <ul className="space-y-2">
             <li className="py-2">
-              <NavLink href="/home">Home</NavLink>
+              <NavLink href="/">Home</NavLink>
             </li>
             <li className="py-2">
               <NavLink href="/about">About</NavLink>
             </li>
             <li className="py-2">
-              <NavLink href="/services">Cast + Creative</NavLink>
+              <NavLink href="/team">Cast + Creative</NavLink>
             </li>
           </ul>
         </div>
@@ -29,7 +29,7 @@ function Footer() {
           <nav>
             <ul className="list-none p-0 space-y-2">
             <li className="py-2">
-                <NavLink href="/careers">Phil Woodmore</NavLink>
+                <NavLink href="/phil-woodmore">Phil Woodmore</NavLink>
               </li>
               <li className="py-2">
                 <NavLink href="/blog">Blog</NavLink>
@@ -57,7 +57,7 @@ function Footer() {
             <div className="flex items-center justify-center gap-4">
               <Tooltip.Root>
                 <Tooltip.Trigger asChild>
-                  <NavLink href="https://facebook.com">
+                  <NavLink href="https://www.facebook.com/profile.php?id=61576144800633">
                     <FaFacebook />
                   </NavLink>
                 </Tooltip.Trigger>
@@ -70,7 +70,7 @@ function Footer() {
                 </Tooltip.Content>
               </Tooltip.Root>
 
-              <Tooltip.Root>
+              {/* <Tooltip.Root>
                 <Tooltip.Trigger asChild>
                   <NavLink href="https://twitter.com">
                     <PiXLogo />
@@ -83,11 +83,11 @@ function Footer() {
                 >
                   Twitter
                 </Tooltip.Content>
-              </Tooltip.Root>
+              </Tooltip.Root> */}
 
               <Tooltip.Root>
                 <Tooltip.Trigger asChild>
-                  <NavLink href="https://instagram.com">
+                  <NavLink href="https://www.instagram.com/teammthemusical/">
                     <FaInstagram />
                   </NavLink>
                 </Tooltip.Trigger>
