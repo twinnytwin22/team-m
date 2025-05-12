@@ -18,7 +18,7 @@ function Footer() {
               <NavLink href="/about">About</NavLink>
             </li>
             <li className="py-2">
-              <NavLink href="/team">Cast + Creative</NavLink>
+              <NavLink href="/team">Cast + Crew</NavLink>
             </li>
           </ul>
         </div>
