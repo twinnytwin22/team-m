@@ -1,5 +1,4 @@
 import React from "react";
-import DarkModeSwitch from "../ThemeToggle";
 import { NavLink } from "./navlink";
 import Image from "next/image";
 
