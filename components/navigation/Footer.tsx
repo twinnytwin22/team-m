@@ -57,7 +57,7 @@ function Footer() {
             <div className="flex items-center justify-center gap-4">
               <Tooltip.Root>
                 <Tooltip.Trigger asChild>
-                  <NavLink href="https://facebook.com/">
+                  <NavLink href="https://facebook.com">
                     <FaFacebook />
                   </NavLink>
                 </Tooltip.Trigger>
