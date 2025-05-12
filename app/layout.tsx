@@ -49,7 +49,7 @@ export default function RootLayout({
             <Toaster />
             <Sonner />
             <Header />
-            <div className="pt-20">
+            <div className="pt-20 overflow-x-hidden">
               {children}
             </div>
           </TooltipProvider>

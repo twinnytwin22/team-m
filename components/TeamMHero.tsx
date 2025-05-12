@@ -27,7 +27,7 @@ function TeamMHero() {
           href="/buy-tickets"
           className="bg-teamm-gold text-white font-bold py-3 px-6 rounded-lg transition duration-300"
         >
-          Buy Tickets
+          Reserve Tickets
         </a>
       </div>
     </div>
