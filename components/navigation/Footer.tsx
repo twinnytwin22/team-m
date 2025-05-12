@@ -3,7 +3,6 @@ import * as Tooltip from "@radix-ui/react-tooltip";
 import Image from "next/image";
 import { NavLink } from "./navlink";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { PiXLogo } from "react-icons/pi";
 
 function Footer() {
   return (

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Clock, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import Link from "next/link";
 
 const Tickets = () => {
