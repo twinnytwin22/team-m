@@ -1,10 +1,10 @@
-import { CloudsHero } from "@/components/CloudsHero2";
 import Newsletter from "@/components/Newsletter";
+import TeamMHero from "@/components/TeamMHero";
 import Tickets from "@/components/Tickets";
 export default function Home() {
   return (
     <div>
-      <CloudsHero />
+      <TeamMHero />
       <Tickets />
       <Newsletter />
 
