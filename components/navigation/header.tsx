@@ -5,6 +5,7 @@ import { NavLink } from "./navlink";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import Link from  "next/link";
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -32,10 +33,12 @@ function Header() {
       </div>
 
       {/* Reserve Tickets Button (Desktop) */}
-      <div className="hidden md:flex">
-        <Button variant="default" className="bg-teamm-gold text-black font-bold uppercase">
-          Reserve Tickets
-        </Button>
+      <div className="hidden md:flex cursor-pointer">
+         <Button className=" bg-teamm-gold text-black font-bold uppercase cursor-pointer">
+                <Link target="_blank" href={'https://www.cocastl.org/calendar/team-m'}>
+                Reserve Tickets
+                </Link>
+              </Button>
       </div>
 
       {/* Hamburger Menu (Mobile) */}
@@ -68,8 +71,10 @@ function Header() {
               <NavLink href="/about">About</NavLink>
               <NavLink href="/team">Cast + Crew</NavLink>
               <NavLink href="/phil-woodmore">Phil Woodmore</NavLink>
-              <Button className="mt-6 bg-teamm-gold text-black font-bold">
+              <Button className="mt-6 bg-teamm-gold text-black font-bold uppercase">
+                <Link target="_blank" href={'https://www.cocastl.org/calendar/team-m'}>
                 Reserve Tickets
+                </Link>
               </Button>
             </nav>
           </SheetContent>

@@ -65,7 +65,7 @@ const SynopsisSection: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeUp}
-          className="space-y-6"
+          className="space-y-6 relative"
         >
           <p className="text-lg md:text-xl leading-relaxed text-white/90">
             In a quiet church basement in the fictional town of Macey, Indiana, nine individuals gather each week for a support group known simply as Team M. What starts as guarded conversation slowly unravels into a deeply human exploration of grief, identity, mental health, and healing. As secrets rise to the surface and tensions begin to simmer, one truth becomes undeniable: these nine lives are far more connected than they appear.
@@ -77,7 +77,7 @@ const SynopsisSection: React.FC = () => {
       </div>
       
       <div className="flex justify-center mt-8">
-        <Button className="bg-teamm-gold hover:bg-teamm-gold/90 text-black font-oswald uppercase tracking-wider text-lg px-8 py-6 font-bold w-fit">
+        <Button className="bg-teamm-gold hover:bg-teamm-gold/90 text-black font-oswald uppercase tracking-wider text-lg px-8 py-6 font-bold w-fit relative">
           <Link
           
             href="/about"
