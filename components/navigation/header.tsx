@@ -26,7 +26,7 @@ function Header() {
         <div className="hidden md:flex space-x-5 items-center px-5">
           <NavLink href="/">Home</NavLink>
           <NavLink href="/about">About</NavLink>
-          <NavLink href="/team">The Team</NavLink>
+          <NavLink href="/team">Cast + Crew</NavLink>
           <NavLink href="/phil-woodmore">Phil Woodmore</NavLink>
         </div>
       </div>
@@ -34,12 +34,7 @@ function Header() {
       {/* Reserve Tickets Button (Desktop) */}
       <div className="hidden md:flex">
         <Button variant="default" className="bg-teamm-gold text-black font-bold">
-          <NavLink
-            href="https://www.cocastl.org/calendar/team-m/"
-          
-          >
           Reserve Tickets
-          </NavLink>
         </Button>
       </div>
 
@@ -71,15 +66,10 @@ function Header() {
             <nav className="flex flex-col space-y-4 text-lg mt-10">
               <NavLink href="/">Home</NavLink>
               <NavLink href="/about">About</NavLink>
-              <NavLink href="/team">The Team</NavLink>
+              <NavLink href="/team">Cast + Crew</NavLink>
               <NavLink href="/phil-woodmore">Phil Woodmore</NavLink>
               <Button className="mt-6 bg-teamm-gold text-black font-bold">
-                <NavLink
-                  href="https://www.cocastl.org/calendar/team-m/"
-                //  className="text-black font-bold"
-                >
                 Reserve Tickets
-                </NavLink>
               </Button>
             </nav>
           </SheetContent>
