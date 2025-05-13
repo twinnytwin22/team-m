@@ -25,7 +25,7 @@ function TeamMHero() {
           A new musical <br/>by <span className='text-xl md:text-2xl'>Phil Woodmore</span>
         </p>
         <Link
-          href="https://mococaweb.myvscloud.com/webtrac/web/search.html?keyword=team+m&begindate=05%2F12%2F2026&enddate=08%2F31%2F2026"
+          href="https://www.cocastl.org/calendar/team-m/"
           target="_blank"
           className="bg-teamm-gold text-black font-bold py-3 px-6 rounded-lg transition duration-300 uppercase font-oswald"
         >
