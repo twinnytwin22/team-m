@@ -33,7 +33,7 @@ function Header() {
 
       {/* Reserve Tickets Button (Desktop) */}
       <div className="hidden md:flex">
-        <Button variant="default" className="bg-teamm-gold text-black font-bold">
+        <Button variant="default" className="bg-teamm-gold text-black font-bold uppercase">
           Reserve Tickets
         </Button>
       </div>
