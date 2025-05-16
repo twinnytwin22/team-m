@@ -47,7 +47,7 @@ export default function PhilStory() {
       <LandingPageHeader title="About Team M."/>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-6 py-20 space-y-20">
+      <main className="max-w-7xl mx-auto px-6 py-20 space-y-20 text-lg">
         {/* Bio Card */}
   
 
