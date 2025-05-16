@@ -35,7 +35,7 @@ function TeamMHero() {
   return (
     <div
       className="relative w-full h-screen flex flex-col items-center justify-center text-white bg-fixed bg-center bg-cover"
-      style={{ backgroundImage: "url('/teamm-bg-full@2x.png')" }}
+      style={{ backgroundImage: "url('/reamm-bg-full_1@4x.png')" }}
     >
       {/* Content */}
       <div className="text-center px-4">
