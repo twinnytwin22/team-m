@@ -1,0 +1,16 @@
+# robots.txt for Team M – The Musical
+# Blocks sensitive or non‑public paths and points crawlers to the sitemap
+
+User-agent: *
+Allow: /
+
+# Prevent indexing of internal or dynamic routes
+Disallow: /api/
+Disallow: /_next/data/
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /login/
+
+# Sitemap and preferred host
+Sitemap: https://teammthemusical.com/sitemap.xml
+Host: teammthemusical.com
