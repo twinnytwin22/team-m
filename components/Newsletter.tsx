@@ -7,22 +7,53 @@ import { useToast } from "@/components/ui/use-toast";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+
   const { toast } = useToast();
-  
-  const handleSubmit = (e: React.FormEvent) => {
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      toast({
-        title: "Success!",
-        description: "You've been added to our mailing list.",
-      });
-      setEmail("");
-    } else {
+    if (!email) {
       toast({
         variant: "destructive",
         title: "Error",
         description: "Please enter your email address.",
       });
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const res = await fetch("/api/email/newsletterSignUp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        toast({
+          title: "Success!",
+          description: "You've been added to our mailing list.",
+        });
+        setEmail("");
+      } else {
+        const data = await res.json();
+        toast({
+          variant: "destructive",
+          title: "Error",
+          description: data?.error || "Something went wrong. Please try again.",
+        });
+      }
+    } catch (err) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Network error. Please try again.",
+      });
+    } finally {
+      setSuccess(true);
+      setLoading(false);
     }
   };
 
@@ -36,25 +67,29 @@ const Newsletter = () => {
                 <MessageSquare className="h-8 w-8 text-teamm-green" />
               </div>
             </div>
-            
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center font-oswald uppercase tracking-wide">
-              Stay Updated
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center font-oswald uppercase tracking-wide">
+              {success ? "Thank you for signing up!" : "Stay Updated"}
             </h2>
-            
             <p className="text-white/80 mb-6 text-center font-crimson text-lg">
-              Join our mailing list for exclusive updates, behind-the-scenes content, and early access to tickets.
+              {success
+                ? "You'll receive exclusive updates, behind-the-scenes content, and early access to tickets."
+                : "Join our mailing list for exclusive updates, behind-the-scenes content, and early access to tickets."}
             </p>
-            
-            <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3">
+            <form hidden={success} onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3">
               <Input
                 type="email"
                 placeholder="Enter your email"
                 className="flex-grow bg-white font-montserrat"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                disabled={loading}
               />
-              <Button type="submit" className="bg-teamm-gold hover:bg-teamm-gold/90 text-black font-oswald uppercase tracking-wider">
-                Subscribe
+              <Button
+                type="submit"
+                className="bg-teamm-gold hover:bg-teamm-gold/90 text-black font-oswald uppercase tracking-wider"
+                disabled={loading}
+              >
+                {loading ? "Subscribing..." : "Subscribe"}
               </Button>
             </form>
           </div>
