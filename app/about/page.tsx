@@ -2,11 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Protest_Riot } from 'next/font/google';
 import LandingPageHeader from '@/components/LandingPageHeader';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -21,12 +19,12 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
 };
 
-const milestones = [
-  { year: '2017', text: 'Off-Broadway invitation for *Antigone in Ferguson*' },
-  { year: '2020', text: 'Master class spark at Red Mountain Theater Company' },
-  { year: '2021', text: 'First drafts of *Team M* shared with collaborators' },
-  { year: '2024', text: 'Four years of workshops, table reads, composition' },
-];
+// const milestones = [
+//   { year: '2017', text: 'Off-Broadway invitation for *Antigone in Ferguson*' },
+//   { year: '2020', text: 'Master class spark at Red Mountain Theater Company' },
+//   { year: '2021', text: 'First drafts of *Team M* shared with collaborators' },
+//   { year: '2024', text: 'Four years of workshops, table reads, composition' },
+// ];
 
 const stats = [
   { value: '4+', label: 'Years in Development' },
@@ -98,7 +96,7 @@ export default function PhilStory() {
           variants={fadeUp}
           className="space-y-8"
         >
-          <h2 className="text-2xl font-semibold text-center uppercase font-montserrat">Praise & Reviews</h2>
+          <h2 className={`text-2xl font-semibold text-center uppercase ${protestRiot.className}`}>Praise & Reviews</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((t, idx) => (
               <blockquote key={idx} className="bg-gray-50 p-6 rounded-lg shadow">
