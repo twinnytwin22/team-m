@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/navigation/header";
 import Footer from "@/components/navigation/Footer";
 import Providers from "@/lib/providers";
-import { Toast, ToastProvider } from "@/components/ui/toast";
+import { ToastProvider } from "@/components/ui/toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
