@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { Protest_Riot } from 'next/font/google';
+// import { Protest_Riot } from 'next/font/google';
 import LandingPageHeader from '@/components/LandingPageHeader';
 
 // const protestRiot = Protest_Riot({
