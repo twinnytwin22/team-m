@@ -1,6 +1,5 @@
 'use client'
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { MessageSquare } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
@@ -8,7 +7,7 @@ import { useToast } from "@/components/ui/use-toast";
 const Newsletter = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-    const [success, setSuccess] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const { toast } = useToast();
 
@@ -37,6 +36,7 @@ const Newsletter = () => {
           description: "You've been added to our mailing list.",
         });
         setEmail("");
+        setSuccess(true);
       } else {
         const data = await res.json();
         toast({
@@ -45,14 +45,13 @@ const Newsletter = () => {
           description: data?.error || "Something went wrong. Please try again.",
         });
       }
-    } catch (err) {
+    } catch {
       toast({
         variant: "destructive",
         title: "Error",
         description: "Network error. Please try again.",
       });
     } finally {
-      setSuccess(true);
       setLoading(false);
     }
   };
@@ -67,7 +66,7 @@ const Newsletter = () => {
                 <MessageSquare className="h-8 w-8 text-teamm-green" />
               </div>
             </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center font-oswald uppercase tracking-wide">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center font-oswald uppercase tracking-wide">
               {success ? "Thank you for signing up!" : "Stay Updated"}
             </h2>
             <p className="text-white/80 mb-6 text-center font-crimson text-lg">
@@ -75,23 +74,26 @@ const Newsletter = () => {
                 ? "You'll receive exclusive updates, behind-the-scenes content, and early access to tickets."
                 : "Join our mailing list for exclusive updates, behind-the-scenes content, and early access to tickets."}
             </p>
-            <form hidden={success} onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-grow bg-white font-montserrat"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                disabled={loading}
-              />
-              <Button
-                type="submit"
-                className="bg-teamm-gold hover:bg-teamm-gold/90 text-black font-oswald uppercase tracking-wider"
-                disabled={loading}
-              >
-                {loading ? "Subscribing..." : "Subscribe"}
-              </Button>
-            </form>
+            {!success && (
+              <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-grow bg-white font-montserrat rounded px-4 py-2"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={loading}
+                  required
+                />
+                <Button
+                  type="submit"
+                  className="bg-teamm-gold hover:bg-teamm-gold/90 text-black font-oswald uppercase tracking-wider"
+                  disabled={loading}
+                >
+                  {loading ? "Subscribing..." : "Subscribe"}
+                </Button>
+              </form>
+            )}
           </div>
         </div>
       </div>
