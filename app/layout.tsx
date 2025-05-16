@@ -29,7 +29,7 @@ export default async function RootLayout({
         <Providers>
           <Header />
           <div className="pt-20 overflow-x-hidden">
-                        <ToastProvider/>
+                        <ToastProvider />
 
             {children}
             <Footer />
