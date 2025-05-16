@@ -62,7 +62,7 @@ function TeamMHero() {
           A new musical <br />by <span className="text-xl md:text-2xl">Phil Woodmore</span>
         </motion.p>
         <Link
-        hidden
+        //hidden
           href="https://www.cocastl.org/calendar/team-m"
           target="_blank"
           className="bg-teamm-gold text-black font-bold py-3 px-6 rounded-lg transition duration-300 uppercase font-oswald"
