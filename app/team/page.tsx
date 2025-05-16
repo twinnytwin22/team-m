@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card'; // Using radiux/shadcn
 import Image from 'next/image';
 import { Protest_Riot } from 'next/font/google';
+import LandingPageHeader from '@/components/LandingPageHeader';
 
 const protestRiot = Protest_Riot({
   subsets: ['latin'],
@@ -55,15 +56,10 @@ const team = [
 
 const CreativeTeam: React.FC = () => {
   return (
-    <section className="bg-gradient-to-b from-[#0d4024] via-[#106e39] to-[#00913f] text-white py-28 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow text-shadow-lg text-7xl text-center pb-24`}        >
-          Creative Team
-        </motion.h1>
+    <section className="bg-gray-100 text-gray-800">
+      <LandingPageHeader title='The Team'/>
+
+      <div className="max-w-6xl mx-auto py-16">
 
         <div className="grid gap-10 md:grid-cols-2">
           {team.map((member, i) => (
@@ -78,7 +74,7 @@ const CreativeTeam: React.FC = () => {
               <Card className="bg-white/5 border-white/10">
                 <CardContent className="p-6">
                   <div className="mb-3">
-                    <h3 className="text-xl font-semibold text-white uppercase">{member.name}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 uppercase">{member.name}</h3>
                     <p className="text-teamm-gold font-medium">{member.title}</p>
                   </div>
                   <div className="relative text-white/90 text-lg leading-relaxed">
@@ -87,9 +83,9 @@ const CreativeTeam: React.FC = () => {
                       alt={member.name}
                       width={96}
                       height={96}
-                      className="float-right ml-4 mb-2 rounded-md border border-white/20 aspect-square object-cover object-top"
+                      className="float-right ml-4 mb-2  border border-white/20 aspect-square object-cover object-top rounded-full"
                     />
-                    <p className="whitespace-pre-line">{member.bio}</p>
+                    <p className="whitespace-pre-line text-gray-900">{member.bio}</p>
                   </div>
                 </CardContent>
               </Card>
