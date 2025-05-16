@@ -44,5 +44,5 @@ export const metadata = {
   },
   metadataBase: new URL('https://teammthemusical.com'),
   authors: [{ name: 'Dr. Philip A. Woodmore' }],
-  generator: 'Next.js',
+ // generator: 'Next.js',
 };

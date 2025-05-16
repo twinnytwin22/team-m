@@ -4,7 +4,7 @@ import Header from "@/components/navigation/header";
 import Footer from "@/components/navigation/Footer";
 import Providers from "@/lib/providers";
 import { ToastProvider } from "@/components/ui/toast";
-
+import { metadata as Meta } from "@/lib/metadata";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const metadata = Meta
 
 export default async function RootLayout({
   children,
