@@ -27,8 +27,8 @@ const PhilStory: React.FC = () => {
           variants={fadeIn}
           className="text-xl md:text-2xl text-center mb-16 text-gray-950/80 font-bold font-montserrat"
         >
-          Dr. Philip A. Woodmore<br />
-          Creator, Writer, Composer & Director
+          Note from Director, Dr. Philip A. Woodmore:<br />
+          <span className='text-base'>Creator, Writer, Composer & Director</span>
         </motion.h2>
 
         <motion.div
