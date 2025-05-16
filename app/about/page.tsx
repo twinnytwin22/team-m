@@ -94,7 +94,7 @@ export default function PhilStory() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeUp}
-          className="space-y-8"
+          className="space-y-8 hidden"
         >
           <h2 className={`text-2xl font-semibold text-center uppercase ${protestRiot.className}`}>Praise & Reviews</h2>
           <div className="grid md:grid-cols-2 gap-8">

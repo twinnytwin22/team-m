@@ -49,7 +49,7 @@ const team = [
   {
     name: 'Steve Hartman',
     title: 'Graphic Designer',
-    image: '/headshots/steve.jpeg',
+    image: '/headshots/Steve_1500px.jpg',
     bio: `A multidisciplinary visual artist known for bold, evocative imagery that blends storytelling with striking design. For *Team M*, Hartman’s visuals capture the emotional core of the show—reflecting themes of mental health, identity, and transformation with authenticity.`,
   },
 ];
@@ -81,9 +81,10 @@ const CreativeTeam: React.FC = () => {
                     <Image
                       src={member.image}
                       alt={member.name}
-                      width={96}
-                      height={96}
-                      className="float-right ml-4 mb-2  border border-white/20 aspect-square object-cover object-top rounded-full"
+                      width={200}
+                      height={200}
+                      quality={100}
+                      className="float-right ml-4 mb-2  border border-white/20 aspect-square object-cover object-top rounded-ful w-24 h-24 rounded-full" 
                     />
                     <p className="whitespace-pre-line text-gray-900">{member.bio}</p>
                   </div>
@@ -93,7 +94,7 @@ const CreativeTeam: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-24 text-center">
+        <div className="mt-24 text-center hidden">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
