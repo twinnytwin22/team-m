@@ -50,6 +50,7 @@ function TeamMHero() {
             width={400}
             height={100}
             className="h-auto w-auto mx-auto mb-4"
+            priority
           />
         </motion.div>
         <motion.p

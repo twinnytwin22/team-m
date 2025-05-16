@@ -72,7 +72,7 @@ const Tickets = () => {
             alt="COCA Logo"
             width={150}
             height={50}
-            className="mx-auto"
+            className="mx-auto h-full w-36"
           />
         </div>
       </div>
