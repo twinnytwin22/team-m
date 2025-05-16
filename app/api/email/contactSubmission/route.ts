@@ -9,19 +9,22 @@ export async function POST(req: Request) {
   if (!email) {
     return NextResponse.json({ error: "Email is required" }, { status: 400 });
   }
+  if (!message) {
+    return NextResponse.json({ error: "Message is required" }, { status: 400 });
+  }
 
   const msg = {
     to: process.env.FROM_EMAIL as string, // admin notification
     from: process.env.FROM_EMAIL as string,
-    subject: "🎉 New Team M Newsletter Signup",
-    text: `New subscriber: ${email}`,
+    subject: "📬 New Team M Contact Form Submission",
+    text: `New contact form submission:\n\nName: ${name || "N/A"}\nEmail: ${email}\nMessage:\n${message}`,
     html: `
    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>New Team M Subscriber</title>
+  <title>New Team M Contact Submission</title>
   <style>
     body { margin:0; padding:0; background-color:#f4f4f8; }
     .wrapper { width:100%; padding:20px 0; background-color:#f4f4f8; }
@@ -65,13 +68,15 @@ export async function POST(req: Request) {
   <div class="wrapper">
     <div class="container">
       <div class="header">
-        <h1>🎉 New Team M Subscriber</h1>
+        <h1>📬 New Team M Contact Submission</h1>
       </div>
       <div class="body">
         <p>Hello Team M Web Team,</p>
-        <p>You’ve got a new newsletter signup:</p>
-        <p><strong>Email:</strong> {{email}}</p>
-        <p>Keep rocking it!</p>
+        <p>You’ve received a new contact form submission:</p>
+        <p><strong>Name:</strong> ${name || "N/A"}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <p style="white-space:pre-line;">${message}</p>
       </div>
     </div>
     <div class="footer">
@@ -80,7 +85,6 @@ export async function POST(req: Request) {
   </div>
 </body>
 </html>
-
     `,
   };
 
@@ -90,7 +94,7 @@ export async function POST(req: Request) {
   } catch (err) {
     console.error("SendGrid error:", err);
     return NextResponse.json(
-      { error: "Error sending signup notification" },
+      { error: "Error sending contact form" },
       { status: 500 }
     );
   }
