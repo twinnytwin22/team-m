@@ -7,11 +7,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Protest_Riot } from 'next/font/google';
 import LandingPageHeader from '@/components/LandingPageHeader';
 
-const protestRiot = Protest_Riot({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-protest-riot',
-});
+// const protestRiot = Protest_Riot({
+//   subsets: ['latin'],
+//   weight: '400',
+//   variable: '--font-protest-riot',
+// });
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: {
