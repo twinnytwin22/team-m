@@ -7,6 +7,8 @@ import { Protest_Riot } from 'next/font/google';
 import LandingPageHeader from '@/components/LandingPageHeader';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import PhotoGallery from '@/components/PhotoGallery';
+import SocialRow from '@/components/SocialRow';
 
 const protestRiot = Protest_Riot({
   subsets: ['latin'],
@@ -34,24 +36,28 @@ const stats = [
 ];
 
 const testimonials = [
-  { quote: `Witnessing Team M come to fruition has been has been nothing short of amazing. As the mental health consultant, I've been honored to watch this grow from an idea to a beautiful work of art. I'm excited for the world to experience this transformational musical!`, 
-    author: 'De-Andrea Blaylock-Solar' },
-  { quote: `The road Team M actualized has been an example of the research and responsibility  that is crucial to tell the story in fullness and truth.  Dr. Woodmore was intentional about integrating voices, professionals and community to ensure the material is grounded in visibility , awareness and support.`, 
-    author: 'Jacqueline Thompson' },
+  {
+    quote: `Witnessing Team M come to fruition has been has been nothing short of amazing. As the mental health consultant, I've been honored to watch this grow from an idea to a beautiful work of art. I'm excited for the world to experience this transformational musical!`,
+    author: 'De-Andrea Blaylock-Solar'
+  },
+  {
+    quote: `The road Team M actualized has been an example of the research and responsibility  that is crucial to tell the story in fullness and truth.  Dr. Woodmore was intentional about integrating voices, professionals and community to ensure the material is grounded in visibility , awareness and support.`,
+    author: 'Jacqueline Thompson'
+  },
 ];
 
 export default function PhilStory() {
   return (
     <ParallaxProvider>
       {/* Hero Section */}
-   
+
       {/* Header Overlay */}
-      <LandingPageHeader title="About Team M."/>
+      <LandingPageHeader title="About Team M." />
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 py-20 space-y-20 text-lg">
         {/* Bio Card */}
-  
+
 
         {/* Timeline & Stats */}
         <div className="grid md:grid-cols-2 gap-16">
@@ -88,8 +94,17 @@ export default function PhilStory() {
               </div>
             ))}
           </motion.div>
+
         </div>
-        <hr className='border-gray-300'/>
+                <hr className='border-gray-300' />
+
+        <div className='gap-4 flex flex-col'>
+
+        <h2 className={`text-2xl font-semibold text-center uppercase ${protestRiot.className}`}>Follow Our Journey</h2>
+            <SocialRow/>
+        <PhotoGallery />
+        </div>
+        <hr className='border-gray-300' />
 
         {/* Testimonials */}
         <motion.section
@@ -115,11 +130,11 @@ export default function PhilStory() {
       <section className="py-20 bg-teamm-green text-white text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 font-montserrat uppercase ">Be Part of the Story</h2>
         <p className="mb-8">Reserve your seat now for the world premiere of <em>Team M</em> in May 2026.</p>
-     <Button className="mt-6 bg-teamm-gold text-black font-bold uppercase">
-                <Link target="_blank" href={'https://www.cocastl.org/calendar/team-m'}>
-                Reserve Tickets
-                </Link>
-              </Button>
+        <Button className="mt-6 bg-teamm-gold text-black font-bold uppercase">
+          <Link target="_blank" href={'https://www.cocastl.org/calendar/team-m'}>
+            Reserve Tickets
+          </Link>
+        </Button>
       </section>
     </ParallaxProvider>
   );
