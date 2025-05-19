@@ -71,7 +71,7 @@ const SynopsisSection: React.FC = () => {
             In a quiet church basement in the fictional town of Macey, Indiana, nine individuals gather each week for a support group known simply as Team M. What starts as guarded conversation slowly unravels into a deeply human exploration of grief, identity, mental health, and healing. As secrets rise to the surface and tensions begin to simmer, one truth becomes undeniable: these nine lives are far more connected than they appear.
           </p>
           <p className="text-lg md:text-xl leading-relaxed text-white/90">
-            At the center is Milo—a young man navigating the chaos of a divided mind—anchored by the “team” that holds him together. Set against a powerful original score that blends gospel, pop, rock, and musical theater, <strong>Team M</strong> invites audiences into a world of vulnerability, laughter, and unexpected redemption. It asks us: What does healing really look like when the world tells you to hide?
+             Set against a powerful original score that blends gospel, pop, rock, and musical theater, <strong>Team M</strong> invites audiences into a world of vulnerability, laughter, and unexpected redemption. It asks us: What does healing really look like when the world tells you to hide?
           </p>
         </motion.div>
       </div>

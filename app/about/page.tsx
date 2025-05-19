@@ -28,14 +28,16 @@ const fadeUp = {
 
 const stats = [
   { value: '4+', label: 'Years in Development' },
-  { value: '50+', label: 'Workshops & Readings' },
+  { value: '15+', label: 'Workshops & Readings' },
   { value: '10+', label: 'Collaborators' },
   { value: 'May 2026', label: 'World Premiere' },
 ];
 
 const testimonials = [
-  { quote: 'A powerful exploration of grief and redemption.', author: 'NY Times' },
-  { quote: 'A journey that will stay with you.', author: 'TheaterMania' },
+  { quote: `Witnessing Team M come to fruition has been has been nothing short of amazing. As the mental health consultant, I've been honored to watch this grow from an idea to a beautiful work of art. I'm excited for the world to experience this transformational musical!`, 
+    author: 'De-Andrea Blaylock-Solar' },
+  { quote: `The road Team M actualized has been an example of the research and responsibility  that is crucial to tell the story in fullness and truth.  Dr. Woodmore was intentional about integrating voices, professionals and community to ensure the material is grounded in visibility , awareness and support.`, 
+    author: 'Jacqueline Thompson' },
 ];
 
 export default function PhilStory() {
@@ -58,7 +60,7 @@ export default function PhilStory() {
             <div className="absolute left-4 top-0 bottom-0 w-1 bg-gold" />
             <div className="space-y-8 pl-10">
               <p>
-                <strong>Team M</strong> is a new musical by Dr. Philip Woodmore, inviting audiences to a weekly support group meeting in Macey, Indiana. Eight individuals gather under the guidance of their leader and community to explore wellness. Through powerful songs and stories, the musical addresses mental health, the mental health industry, and broader issues of race, identity, and inclusion. Join us for this week’s Team M group session—where no challenge is too small and every voice matters.
+                <strong>Team M</strong> is a new musical by Dr. Philip Woodmore, inviting audiences to a weekly support group meeting in Macey, Indiana. Nine individuals gather under the guidance of their leader and community to explore wellness. Through powerful songs and stories, the musical addresses mental health, the mental health industry, and broader issues of race, identity, and inclusion. Join us for this week’s Team M group session—where no challenge is too small and every voice matters.
               </p>
               <ul className="list-disc pl-6 text-gray-700 space-y-1">
                 <li>
@@ -87,6 +89,7 @@ export default function PhilStory() {
             ))}
           </motion.div>
         </div>
+        <hr className='border-gray-300'/>
 
         {/* Testimonials */}
         <motion.section
@@ -94,7 +97,7 @@ export default function PhilStory() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeUp}
-          className="space-y-8 hidden"
+          className="space-y-8"
         >
           <h2 className={`text-2xl font-semibold text-center uppercase ${protestRiot.className}`}>Praise & Reviews</h2>
           <div className="grid md:grid-cols-2 gap-8">

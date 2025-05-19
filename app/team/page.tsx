@@ -24,34 +24,40 @@ const fadeUp = {
 const team = [
   {
     name: 'Dr. Philip A. Woodmore',
-    title: 'Book, Music, and Lyrics',
+    title: 'Music, Lyrics and Book by',
     image: '/headshots/phil.jpeg', // Replace with real image later
-    bio: `A composer, educator, and music director based in St. Louis, Dr. Woodmore is best known for his Off-Broadway hit *Antigone in Ferguson*, which blended Greek tragedy with gospel to spark national conversations on justice. He also created *The Drum Major Instinct*, a musical adaptation of Dr. Martin Luther King Jr.’s final sermon. With *Team M*, Woodmore continues his mission of using music and theater to catalyze healing and social change.`,
+    bio: `A composer, educator, and music director based in St. Louis, Dr. Woodmore is best known for his Off-Broadway hit "Antigone in Ferguson", which blended Greek tragedy with gospel to spark national conversations on justice. He also created "The Drum Major Instinct", a musical adaptation of Dr. Martin Luther King Jr.’s final sermon. With "Team M", Woodmore continues his mission of using music and theater to catalyze healing and social change.`,
   },
   {
     name: 'Noah Van Ess',
-    title: 'Orchestrator',
+    title: 'Orchestrator and Co-Arranger ',
     image: '/headshots/noah.jpeg',
-    bio: `A rising star in the world of musical theater and orchestration. A member of the Carnegie Mellon University Class of 2027, Noah is currently pursuing his BFA in Musical Theatre while also cultivating his gifts as a composer, arranger, and musician. *Team M* marks his first major project as orchestrator—delivering a dynamic and emotionally rich score full of color, texture, and heart.`,
+    bio: `A rising star in the world of musical theater and orchestration. A member of the Carnegie Mellon University Class of 2027, Noah is currently pursuing his BFA in Musical Theatre while also cultivating his gifts as a composer, arranger, and musician. "Team M" marks his first major project as orchestrator—delivering a dynamic and emotionally rich score full of color, texture, and heart.`,
   },
   {
     name: 'Michael Beatty',
     title: 'Creative Consultant',
     image: '/headshots/michael.jpg',
-    bio: `A Broadway veteran and master educator, Michael Beatty brings decades of theatrical expertise to *Team M*. His experience as a performer, director, and mentor supports the artistic and emotional integrity of this work.`,
+    bio: `A Broadway veteran and master educator, Michael Beatty brings decades of theatrical expertise to "Team M". His experience as a performer, director, and mentor supports the artistic and emotional integrity of this work.`,
   },
   {
     name: 'Shawna Flanigan',
     title: 'Dramaturg',
     image: '/headshots/shawna.jpeg',
-    bio: `A respected theater artist and arts administrator, Shawna has over two decades of experience in youth arts education, devising, and dramaturgy. Her work emphasizes socially engaged theater and inclusive creative spaces. As dramaturg, she ensures the storytelling in *Team M* remains grounded and resonant—particularly around mental health and identity.`,
+    bio: `A respected theater artist and arts administrator, Shawna has over two decades of experience in youth arts education, devising, and dramaturgy. Her work emphasizes socially engaged theater and inclusive creative spaces. As dramaturg, she ensures the storytelling in "Team M" remains grounded and resonant—particularly around mental health and identity.`,
   },
   {
     name: 'Steve Hartman',
     title: 'Graphic Designer',
     image: '/headshots/Steve_1500px.jpg',
-    bio: `A multidisciplinary visual artist known for bold, evocative imagery that blends storytelling with striking design. For *Team M*, Hartman’s visuals capture the emotional core of the show—reflecting themes of mental health, identity, and transformation with authenticity.`,
+    bio: `A multidisciplinary visual artist known for bold, evocative imagery that blends storytelling with striking design. For "Team M", Hartman’s visuals capture the emotional core of the show—reflecting themes of mental health, identity, and transformation with authenticity.`,
   },
+ {
+  name: "Randal Herndon",
+  title: "Marketing & Advertising ",
+  image: "/headshots/randal.jpeg",
+  bio: `Randal Herndon is a dynamic creative professional and digital strategist originally from St. Louis, Missouri. A 2013 graduate of Webster University, he holds a B.A. in Audio Production and Media Communications, along with a certificate in Small Business and Entrepreneurship. Currently based in Phoenix, Arizona, Randal serves as the Website Manager at the Arizona Science Center, where he brings innovation and storytelling to the forefront of digital engagement. A multi-talented artist, Randal is also a celebrated DJ and music producer, performing under the name DJ Twinny Twin.`,
+ }
 ];
 
 const CreativeTeam: React.FC = () => {
@@ -60,6 +66,13 @@ const CreativeTeam: React.FC = () => {
       <LandingPageHeader title='The Team'/>
 
       <div className="max-w-6xl mx-auto py-16">
+                <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className={`text-3xl font-semibold text-center uppercase my-16 ${protestRiot.className}`}>
+          Creative Team
+        </motion.h1>          
 
         <div className="grid gap-10 md:grid-cols-2">
           {team.map((member, i) => (
@@ -93,15 +106,16 @@ const CreativeTeam: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
-        <div className="mt-24 text-center hidden">
+<hr className="border-gray-300 my-16" />
+        <div className="mt-24 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow text-shadow-lg text-7xl text-center pb-24`}        >
+          className={`text-3xl font-semibold text-center uppercase ${protestRiot.className}`}>
           Cast & Crew
-        </motion.h1>          <p className="text-white/80 text-lg">
+        </motion.h1>          
+        <p className="text-black/80 text-lg">
             Additional designers and production team to be announced in{' '}
             <span className="text-teamm-gold font-semibold">Fall 2025</span>.
           </p>
