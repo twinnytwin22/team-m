@@ -56,7 +56,7 @@ const team = [
   name: "Randal Herndon",
   title: "Marketing & Advertising ",
   image: "/headshots/randal.jpeg",
-  bio: `Randal Herndon is a dynamic creative professional and digital strategist originally from St. Louis, Missouri. A 2013 graduate of Webster University, he holds a B.A. in Audio Production and Media Communications, along with a certificate in Small Business and Entrepreneurship. Currently based in Phoenix, Arizona, Randal serves as the Website Manager at the Arizona Science Center, where he brings innovation and storytelling to the forefront of digital engagement. A multi-talented artist, Randal is also a celebrated DJ and music producer, performing under the name DJ Twinny Twin.`,
+  bio: `Randal Herndon is a dynamic creative professional and digital strategist from St. Louis, Missouri, now based in Phoenix, Arizona. As Website Manager at the Arizona Science Center, he elevates digital engagement through innovation and storytelling. He’s also a celebrated DJ and music producer under the name Twinny Twin.`,
  }
 ];
 
