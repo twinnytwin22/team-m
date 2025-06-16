@@ -25,7 +25,7 @@ const Tickets = () => {
             </div>
             <div className="flex items-center justify-center md:justify-start">
               <CalendarDays className="w-5 h-5 text-teamm-gold mr-2" />
-              <span>Sat, May 16 – 3:00PM &amp; 7:00PM</span>
+              <span>Sat, May 16 – 2:00PM &amp; 7:00PM</span>
             </div>
           </div>
         </div>
