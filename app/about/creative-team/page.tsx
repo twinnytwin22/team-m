@@ -63,16 +63,9 @@ const team = [
 const CreativeTeam: React.FC = () => {
   return (
     <section className="bg-gray-100 text-gray-800">
-      <LandingPageHeader title='The Team'/>
+      <LandingPageHeader title='The Creative Team'/>
 
-      <div className="max-w-6xl mx-auto py-16">
-                <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className={`text-3xl font-semibold text-center uppercase my-16 ${protestRiot.className}`}>
-          Creative Team
-        </motion.h1>          
+      <div className="max-w-6xl mx-auto py-16">        
 
         <div className="grid gap-10 md:grid-cols-2">
           {team.map((member, i) => (
@@ -106,7 +99,7 @@ const CreativeTeam: React.FC = () => {
             </motion.div>
           ))}
         </div>
-<hr className="border-gray-300 my-16" />
+       <hr className="border-gray-300 my-16" />
         <div className="mt-24 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}

@@ -46,7 +46,7 @@ function Header() {
               <div className="py-2">
      
                 <Link 
-                  href="/about/team" 
+                  href="/about/creative-team" 
                   className="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors font-oswald uppercase tracking-wide font-semibold w-full"
                 >
                   The Creative Team
