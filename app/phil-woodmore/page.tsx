@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import LandingPageHeader from '@/components/LandingPageHeader';
 
+export const dynamic = 'force-dynamic';
+
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: {

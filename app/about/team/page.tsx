@@ -26,7 +26,7 @@ const team = [
     name: 'Dr. Philip A. Woodmore',
     title: 'Music, Lyrics and Book by',
     image: '/headshots/phil.jpeg', // Replace with real image later
-    bio: `A composer, educator, and music director based in St. Louis, Dr. Woodmore is best known for his Off-Broadway hit "Antigone in Ferguson", which blended Greek tragedy with gospel to spark national conversations on justice. He also created "The Drum Major Instinct", a musical adaptation of Dr. Martin Luther King Jr.’s final sermon. With "Team M", Woodmore continues his mission of using music and theater to catalyze healing and social change.`,
+    bio: `A composer, educator, and music director based in St. Louis, Dr. Woodmore is best known for his Off-Broadway hit "Antigone in Ferguson", which blended Greek tragedy with gospel to spark national conversations on justice. He also created "The Drum Major Instinct", a musical adaptation of Dr. Martin Luther King Jr.'s final sermon. With "Team M", Woodmore continues his mission of using music and theater to catalyze healing and social change.`,
   },
   {
     name: 'Noah Van Ess',
@@ -50,13 +50,13 @@ const team = [
     name: 'Steve Hartman',
     title: 'Graphic Designer',
     image: '/headshots/Steve_1500px.jpg',
-    bio: `A multidisciplinary visual artist known for bold, evocative imagery that blends storytelling with striking design. For "Team M", Hartman’s visuals capture the emotional core of the show—reflecting themes of mental health, identity, and transformation with authenticity.`,
+    bio: `A multidisciplinary visual artist known for bold, evocative imagery that blends storytelling with striking design. For "Team M", Hartman's visuals capture the emotional core of the show—reflecting themes of mental health, identity, and transformation with authenticity.`,
   },
  {
   name: "Randal Herndon",
   title: "Marketing & Advertising ",
   image: "/headshots/randal.jpeg",
-  bio: `Randal Herndon is a dynamic creative professional and digital strategist from St. Louis, Missouri, now based in Phoenix, Arizona. As Website Manager at the Arizona Science Center, he elevates digital engagement through innovation and storytelling. He’s also a celebrated DJ and music producer under the name Twinny Twin.`,
+  bio: `Randal Herndon is a dynamic creative professional and digital strategist from St. Louis, Missouri, now based in Phoenix, Arizona. As Website Manager at the Arizona Science Center, he elevates digital engagement through innovation and storytelling. He's also a celebrated DJ and music producer under the name Twinny Twin.`,
  }
 ];
 
