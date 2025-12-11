@@ -1,7 +1,5 @@
-import sgMail from "@sendgrid/mail";
+import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
-
-sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
 export async function POST(req: Request) {
   const { email, name, message } = await req.json();
@@ -13,9 +11,20 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Message is required" }, { status: 400 });
   }
 
-  const msg = {
-    to: process.env.FROM_EMAIL as string, // admin notification
-    from: process.env.FROM_EMAIL as string,
+  // Create a transporter using your email service
+  const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT || "587"),
+    secure: process.env.SMTP_SECURE === "true",
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
+
+  const mailOptions = {
+    from: process.env.FROM_EMAIL,
+    to: process.env.FROM_EMAIL, // admin notification
     subject: "📬 New Team M Contact Form Submission",
     text: `New contact form submission:\n\nName: ${name || "N/A"}\nEmail: ${email}\nMessage:\n${message}`,
     html: `
@@ -89,10 +98,10 @@ export async function POST(req: Request) {
   };
 
   try {
-    await sgMail.send(msg);
+    await transporter.sendMail(mailOptions);
     return NextResponse.json({ success: true });
   } catch (err) {
-    console.error("SendGrid error:", err);
+    console.error("Nodemailer error:", err);
     return NextResponse.json(
       { error: "Error sending contact form" },
       { status: 500 }
