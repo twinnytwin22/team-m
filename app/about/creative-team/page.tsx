@@ -60,6 +60,28 @@ const team = [
  }
 ];
 
+
+const productionTeam = [
+  {
+    name: "Jacqueline Thompson",
+    title: "Director",
+    image: "/headshots/jacq_headshot.jpeg",
+    bio: `Jacqueline Thompson is a St. Louis–based actor, director, educator, and the Artistic Director of Metro Theater Company, where she leads youth-focused, inclusive theatrical programming and community engagement. A seasoned theater professional and associate professor at the University of Missouri-St. Louis, she has directed and performed with many local companies and is recognized for her leadership in the arts and commitment to expanding opportunities for diverse voices in theater.`
+  }, 
+  {
+    name: "Alisa Cooper", 
+    title: "Choreographer",
+    image: "/headshots/alisa.jpeg",
+bio: `Alisa Cooper is a St. Louis–based choreographer and Program Manager for COCA’s summer arts camps, where she brings years of experience as a teaching artist and alum of the organization to her work with young performers and creatives. She started dancing at COCA as a child and continues to participate in local productions, most recently choreographing a production of Hairspray for a St. Louis theater company, showcasing her artistic leadership in the regional performing arts community.`
+}, 
+{
+  name: "Al Anderson",
+  title: "Music Supervisor/Pit Conductor ",
+  image: "/headshots/al.jpeg",
+    bio: `Al Anderson is a St. Louis-born singer, songwriter, composer, producer, and music director known for his dynamic work in performance and theater. He has served as music director and instrumentalist for numerous regional theatrical productions, contributed to community arts events, and leads artist development initiatives while also releasing his own music and serving as a music consultant and educator.`
+}
+]
+
 const CreativeTeam: React.FC = () => {
   return (
     <section className="bg-gray-100 text-gray-800">
@@ -99,6 +121,45 @@ const CreativeTeam: React.FC = () => {
             </motion.div>
           ))}
         </div>
+<hr className="border-gray-300 my-16" />
+        <div className="my-16">
+          <h2 className={`text-3xl font-semibold text-center uppercase mb-10 ${protestRiot.className}`}>
+            Production Team
+          </h2>
+          <div className="grid gap-10 md:grid-cols-2">
+            {productionTeam.map((member, i) => (
+              <motion.div
+                key={i}
+                custom={i}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 border-white/10">
+                  <CardContent className="p-6">
+                    <div className="mb-3">
+                      <h3 className="text-xl font-semibold text-gray-900 uppercase">{member.name}</h3>
+                      <p className="text-teamm-gold font-medium">{member.title}</p>
+                    </div>
+                    <div className="relative text-white/90 text-lg leading-relaxed">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={200}
+                        height={200}
+                        quality={100}
+                        className="float-right ml-4 mb-2  border border-white/20 aspect-square object-cover object-top rounded-ful w-24 h-24 rounded-full"
+                      />
+                      <p className="whitespace-pre-line text-gray-900">{member.bio}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
        <hr className="border-gray-300 my-16" />
         <div className="mt-24 text-center">
         <motion.h1
