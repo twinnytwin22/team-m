@@ -171,7 +171,7 @@ const CreativeTeam: React.FC = () => {
         </motion.h1>          
         <p className="text-black/80 text-lg">
             Additional designers and production team to be announced in{' '}
-            <span className="text-teamm-gold font-semibold">Fall 2025</span>.
+            <span className="text-teamm-gold font-semibold">February 2025</span>.
           </p>
         </div>
       </div>
