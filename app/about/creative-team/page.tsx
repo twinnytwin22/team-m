@@ -99,22 +99,22 @@ const CreativeTeam: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <Card className="bg-white/5 border-white/10">
-                <CardContent className="p-6">
-                  <div className="mb-3">
-                    <h3 className="text-xl font-semibold text-gray-900 uppercase">{member.name}</h3>
-                    <p className="text-teamm-gold font-medium">{member.title}</p>
+              <Card className="bg-white border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-8">
+                  <div className="mb-4">
+                    <h3 className="text-2xl font-bold text-gray-900 uppercase tracking-tight">{member.name}</h3>
+                    <p className="text-teamm-gold font-semibold mt-1 text-sm uppercase tracking-wide">{member.title}</p>
                   </div>
-                  <div className="relative text-white/90 text-lg leading-relaxed">
+                  <div className="relative text-gray-700 leading-loose">
                     <Image
                       src={member.image}
                       alt={member.name}
-                      width={200}
-                      height={200}
+                      width={120}
+                      height={120}
                       quality={100}
-                      className="float-right ml-4 mb-2  border border-white/20 aspect-square object-cover object-top rounded-ful w-24 h-24 rounded-full" 
+                      className="float-right ml-6 mb-4 border-2 border-gray-200 aspect-square object-cover object-top w-28 h-28 rounded-full shadow-sm" 
                     />
-                    <p className="whitespace-pre-line text-gray-900">{member.bio}</p>
+                    <p className="whitespace-pre-line text-base">{member.bio}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -136,22 +136,22 @@ const CreativeTeam: React.FC = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
               >
-                <Card className="bg-white/5 border-white/10">
-                  <CardContent className="p-6">
-                    <div className="mb-3">
-                      <h3 className="text-xl font-semibold text-gray-900 uppercase">{member.name}</h3>
-                      <p className="text-teamm-gold font-medium">{member.title}</p>
+                <Card className="bg-white border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-8">
+                    <div className="mb-4">
+                      <h3 className="text-2xl font-bold text-gray-900 uppercase tracking-tight">{member.name}</h3>
+                      <p className="text-teamm-gold font-semibold mt-1 text-sm uppercase tracking-wide">{member.title}</p>
                     </div>
-                    <div className="relative text-white/90 text-lg leading-relaxed">
+                    <div className="relative text-gray-700 leading-loose">
                       <Image
                         src={member.image}
                         alt={member.name}
-                        width={200}
-                        height={200}
+                        width={120}
+                        height={120}
                         quality={100}
-                        className="float-right ml-4 mb-2  border border-white/20 aspect-square object-cover object-top rounded-ful w-24 h-24 rounded-full"
+                        className="float-right ml-6 mb-4 border-2 border-gray-200 aspect-square object-cover object-top w-28 h-28 rounded-full shadow-sm"
                       />
-                      <p className="whitespace-pre-line text-gray-900">{member.bio}</p>
+                      <p className="whitespace-pre-line text-base">{member.bio}</p>
                     </div>
                   </CardContent>
                 </Card>

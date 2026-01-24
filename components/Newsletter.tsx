@@ -79,7 +79,7 @@ const Newsletter = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-grow bg-white font-montserrat rounded px-4 py-2"
+                  className="grow bg-white font-montserrat rounded px-4 py-2"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={loading}
@@ -87,7 +87,7 @@ const Newsletter = () => {
                 />
                 <Button
                   type="submit"
-                  className="bg-teamm-gold hover:bg-teamm-gold/90 text-black font-oswald uppercase tracking-wider"
+                  className="bg-teamm-gold hover:bg-teamm-gold/90 text-black font-oswald uppercase tracking-wider font-bold"
                   disabled={loading}
                 >
                   {loading ? "Subscribing..." : "Subscribe"}

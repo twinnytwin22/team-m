@@ -15,14 +15,14 @@ function PhotoGallery() {
     <div className="w-full py-8 px-2">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {images.map((img, idx) => (
-          <Card key={idx} className="overflow-hidden shadow-lg">
+          <Card key={idx} className="overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
             <CardContent className="p-0">
               <Image
                 src={img.src}
                 alt={img.alt}
                 width={600}
                 height={400}
-                className="w-full h-64 object-cover"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                 priority={idx === 0}
               />
             </CardContent>
