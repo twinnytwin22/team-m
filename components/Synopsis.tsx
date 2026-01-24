@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { Protest_Riot } from 'next/font/google';
 import Image from 'next/image';
 import { Button } from './ui/button';
@@ -13,7 +13,7 @@ const protestRiot = Protest_Riot({
   variable: '--font-protest-riot',
 });
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
@@ -24,7 +24,7 @@ const fadeUp = {
 
 const SynopsisSection: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-br from-[#00913f] via-[#106e39] to-[#0d4024] text-white py-28 px-6 md:px-10 before:absolute before:inset-0 before:bg-gradient-to-tr before:from-black/10 before:to-transparent">
+    <section className="relative bg-linear-to-br from-[#00913f] via-[#106e39] to-[#0d4024] text-white py-28 px-6 md:px-10 before:absolute before:inset-0 before:bg-linear-to-tr before:from-black/10 before:to-transparent">
       
       <div className="mb-5">
         <Image

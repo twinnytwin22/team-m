@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Protest_Riot } from 'next/font/google';
 import LandingPageHeader from '@/components/LandingPageHeader';
@@ -16,7 +16,7 @@ const protestRiot = Protest_Riot({
   variable: '--font-protest-riot',
 });
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
 };

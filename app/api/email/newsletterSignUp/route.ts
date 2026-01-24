@@ -6,7 +6,9 @@ export async function POST(req: Request) {
 
   const fromEmail = process.env.SMTP_FROM_EMAIL;
   const authUser = process.env.SMTP_USER;
-  const fromAddress = fromEmail ? `Team M <${fromEmail}>` : undefined;
+  
+  // Send FROM the authenticated user to pass DMARC checks
+  const validSender = `Team M <${authUser}>`;
 
   if (!email) {
     return NextResponse.json({ error: "Email is required" }, { status: 400 });
@@ -36,7 +38,7 @@ export async function POST(req: Request) {
   });
 
   const mailOptions = {
-    from: fromAddress || fromEmail,
+    from: validSender,
     to: fromEmail, // admin notification
     replyTo: fromEmail,
     subject: "🎉 New Team M Newsletter Signup",
@@ -123,7 +125,7 @@ export async function POST(req: Request) {
   };
 
   const subscriberMailOptions = {
-    from: fromAddress || fromEmail,
+    from: validSender,
     to: email,
     replyTo: fromEmail,
     subject: "✅ You’re subscribed to Team M",

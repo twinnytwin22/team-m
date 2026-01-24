@@ -3,9 +3,9 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
-const logoVariants = {
+const logoVariants: Variants = {
   hidden: { opacity: 0, scale: 0.8, rotate: -15 },
   visible: {
     opacity: 1,
@@ -18,7 +18,7 @@ const logoVariants = {
   },
 };
 
-const textVariants = {
+const textVariants: Variants = {
   hidden: { opacity: 0, scale: 0.5 },
   visible: {
     opacity: 1,
