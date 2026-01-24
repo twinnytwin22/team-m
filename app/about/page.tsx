@@ -49,6 +49,7 @@ const testimonials = [
 export default function PhilStory() {
   return (
     <ParallaxProvider>
+      <div className="bg-white text-gray-900">
       {/* Hero Section */}
 
       {/* Header Overlay */}
@@ -136,6 +137,7 @@ export default function PhilStory() {
           </Link>
         </Button>
       </section>
+      </div>
     </ParallaxProvider>
   );
 }

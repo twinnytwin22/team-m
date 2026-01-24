@@ -76,12 +76,13 @@ const SynopsisSection: React.FC = () => {
         </motion.div>
       </div>
       
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center mt-12 relative">
+                  <Link href="/about">
+
         <Button className="bg-teamm-gold hover:bg-teamm-gold/90 text-black uppercase tracking-wider text-lg px-10 py-6 font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-          <Link href="/about">
             Learn More
-          </Link>
         </Button>
+        </Link>
       </div>
       
     </section>
