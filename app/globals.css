@@ -2,19 +2,21 @@
 
 /* @variant dark (&:where(.dark, .dark *)); */
 
-
-/* @layer base {
-  .dark,
-  [data-theme="dark"] {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  :root {
+    --teamm-green: #00913f;
+    --teamm-green-mid: #106e39;
+    --teamm-green-dark: #0d4024;
+    --teamm-gold: #f7941d;
+    --teamm-gold-light: #f7ae1d;
+    --teamm-black: #000000;
   }
-} */
+}
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), Helvetica, sans-serif;
 }
 
 @layer utilities {
@@ -110,81 +112,40 @@ body {
     --tw-ring-color: hsl(var(--sidebar-ring));
   }
 
-  /* Utility classes for all custom theme tokens */
-  .bg-teamm-green {
-    background-color: #00913f;
-  }
-  .bg-teamm-gold {
-    background-color: #f7941d;
-  }
-  .bg-teamm-black {
-    background-color: #000000;
-  }
+  /* Brand color utilities — reference CSS custom properties */
+  .bg-teamm-green { background-color: var(--teamm-green); }
+  .bg-teamm-green-mid { background-color: var(--teamm-green-mid); }
+  .bg-teamm-green-dark { background-color: var(--teamm-green-dark); }
+  .bg-teamm-gold { background-color: var(--teamm-gold); }
+  .bg-teamm-black { background-color: var(--teamm-black); }
 
-  .text-teamm-green {
-    color: #00913f;
-  }
-  .text-teamm-gold {
-    color: #f7941d;
-  }
-  .text-teamm-black {
-    color: #000000;
-  }
+  .text-teamm-green { color: var(--teamm-green); }
+  .text-teamm-gold { color: var(--teamm-gold); }
+  .text-teamm-black { color: var(--teamm-black); }
 
-  .border-teamm-green {
-    border-color: #00913f;
+  .border-teamm-green { border-color: var(--teamm-green); }
+  .border-teamm-gold { border-color: var(--teamm-gold); }
+  .border-teamm-gold-light { border-color: var(--teamm-gold-light); }
+  .border-teamm-black { border-color: var(--teamm-black); }
+
+  /* Signature gradient utilities */
+  .bg-teamm-gradient {
+    background-image: linear-gradient(to bottom, var(--teamm-green-dark), var(--teamm-green-mid), var(--teamm-green));
   }
-  .border-teamm-gold {
-    border-color: #f7941d;
-  }
-  .border-teamm-gold-light {
-    border-color: #f7ae1d;
-  }
-  .border-teamm-black {
-    border-color: #000000;
+  .bg-teamm-gradient-br {
+    background-image: linear-gradient(to bottom right, var(--teamm-green), var(--teamm-green-mid), var(--teamm-green-dark));
   }
   .protest-riot {
-    font-family: "Protest Riot", sans-serif;
+    font-family: var(--font-protest-riot), sans-serif;
     font-weight: 400;
     font-style: normal;
   }
-      
+
+  .font-montserrat {
+    font-family: var(--font-montserrat), sans-serif;
+  }
+  .font-crimson {
+    font-family: var(--font-crimson), Georgia, serif;
+  }
 }
 
-@layer components {
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-  }
-
-  @keyframes logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    a:nth-of-type(2) .logo {
-      animation: logo-spin infinite 20s linear;
-    }
-  }
-
-  .card {
-    padding: 2em;
-  }
-
-  .read-the-docs {
-    color: #888;
-  }
-}

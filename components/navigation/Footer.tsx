@@ -6,35 +6,34 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="bg-black text-white pt-12 px-5 pb-24">
+    <footer className="bg-black text-white pt-12 px-5 pb-12">
       <div className="max-w-5xl mx-auto flex flex-col lg:flex-row gap-y-8 lg:gap-y-0 lg:justify-between">
         {/* First column: Navigation Links */}
-        <div className="flex-1 space-y-2 text-center lg:text-left lg:space-x-4 text-3xl">
+        <div className="flex-1 space-y-2 text-center lg:text-left lg:space-x-4 text-sm md:text-base">
           <ul className="space-y-2">
-            <li className="py-2">
+            <li className="py-1">
               <NavLink href="/">Home</NavLink>
             </li>
-            <li className="py-2">
+            <li className="py-1">
               <NavLink href="/about">About</NavLink>
             </li>
-            <li className="py-2">
-              <NavLink href="/about/team">The Team</NavLink>
+            <li className="py-1">
+              <NavLink href="/about/creative-team">The Team</NavLink>
             </li>
           </ul>
         </div>
 
         {/* Second column: Additional Navigation Links */}
-        <div className="flex-1 space-y-2 text-center lg:text-left lg:space-x-4 text-3xl">
+        <div className="flex-1 space-y-2 text-center lg:text-left lg:space-x-4 text-sm md:text-base">
           <nav>
             <ul className="list-none p-0 space-y-2">
-            <li className="py-2">
+              <li className="py-1">
                 <NavLink href="/phil-woodmore">Phil Woodmore</NavLink>
               </li>
-              <li className="py-2">
+              <li className="py-1">
                 <NavLink href="/blog">Blog</NavLink>
               </li>
-             
-              <li className="py-2">
+              <li className="py-1">
                 <NavLink href="/contact">Contact</NavLink>
               </li>
             </ul>
@@ -101,6 +100,11 @@ function Footer() {
             </div>
           </Tooltip.Provider>
         </div>
+      </div>
+      <div className="max-w-5xl mx-auto mt-10 pt-6 border-t border-white/10 text-center">
+        <p className="text-xs text-white/50 font-montserrat">
+          &copy; 2026 Team M: A New Musical. All rights reserved.
+        </p>
       </div>
     </footer>
   );

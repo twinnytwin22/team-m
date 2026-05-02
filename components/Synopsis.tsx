@@ -2,16 +2,9 @@
 
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
-import { Protest_Riot } from 'next/font/google';
 import Image from 'next/image';
 import { Button } from './ui/button';
 import Link from 'next/link';
-
-const protestRiot = Protest_Riot({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-protest-riot',
-});
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -24,7 +17,7 @@ const fadeUp: Variants = {
 
 const SynopsisSection: React.FC = () => {
   return (
-    <section className="relative bg-linear-to-br from-[#00913f] via-[#106e39] to-[#0d4024] text-white py-28 px-6 md:px-10 before:absolute before:inset-0 before:bg-linear-to-tr before:from-black/10 before:to-transparent">
+    <section className="relative bg-teamm-gradient-br text-white py-28 px-6 md:px-10 before:absolute before:inset-0 before:bg-linear-to-tr before:from-black/10 before:to-transparent">
       
       <div className="mb-5">
         <Image
@@ -46,16 +39,16 @@ const SynopsisSection: React.FC = () => {
           <span className="uppercase text-shadow text-shadow-amber-300 text-shadow-sm">
             A powerful journey of
           </span>{' '}
-          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>
+          <span className={`protest-riot text-teamm-gold text-shadow-black text-shadow-lg`}>
             healing
           </span>,{' '}
-          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>
+          <span className={`protest-riot text-teamm-gold text-shadow-black text-shadow-lg`}>
             connection
           </span>,{' '}
           <span className="uppercase text-shadow text-shadow-amber-300 text-shadow-sm">
             and
           </span>{' '}
-          <span className={`${protestRiot.className} text-teamm-gold text-shadow-black text-shadow-lg`}>
+          <span className={`protest-riot text-teamm-gold text-shadow-black text-shadow-lg`}>
             redemption.
           </span>
         </motion.h2>

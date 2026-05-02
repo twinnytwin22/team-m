@@ -7,12 +7,12 @@ import Image from 'next/image';
 
 const Tickets = () => {
   return (
-    <section className="bg-black py-10 px-4 relative overflow-hidden text-center">
+    <section className="bg-black py-20 px-4 relative overflow-hidden text-center">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch justify-between gap-8">
         
         {/* Premiere Details */}
         <div className="w-full md:w-1/3 flex flex-col justify-end text-center md:text-left">
-          <h2 className="text-teamm-gold text-2xl md:text-3xl font-oswald uppercase tracking-wide mb-2 font-bold">
+          <h2 className="text-teamm-gold text-2xl md:text-3xl uppercase tracking-wide mb-2 font-bold">
             World Premiere
           </h2>
           <p className="text-white text-lg md:text-xl font-montserrat mb-3">
@@ -54,7 +54,7 @@ const Tickets = () => {
             rel="noopener noreferrer"
             className="cursor-pointer"
           >
-            <Button className="bg-teamm-gold hover:bg-teamm-gold/90 text-black font-oswald uppercase tracking-wider text-lg px-8 py-6 font-bold">
+            <Button className="bg-teamm-gold hover:bg-teamm-gold/90 text-black uppercase tracking-wider text-lg px-8 py-6 font-bold">
               Reserve Tickets
             </Button>
           </Link>

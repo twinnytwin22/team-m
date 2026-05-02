@@ -4,14 +4,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card'; // Using radiux/shadcn
 import Image from 'next/image';
-import { Protest_Riot } from 'next/font/google';
 import LandingPageHeader from '@/components/LandingPageHeader';
-
-const protestRiot = Protest_Riot({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-protest-riot',
-});
+import CrossPageCallout from '@/components/CrossPageCallout';
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
@@ -112,7 +106,7 @@ const CreativeTeam: React.FC = () => {
                       width={120}
                       height={120}
                       quality={100}
-                      className="float-right ml-6 mb-4 border-2 border-gray-200 aspect-square object-cover object-top w-28 h-28 rounded-full shadow-sm" 
+                      className="float-right ml-6 mb-4 border-2 border-teamm-gold/40 aspect-square object-cover object-top w-28 h-28 rounded-full shadow-sm" 
                     />
                     <p className="whitespace-pre-line text-base">{member.bio}</p>
                   </div>
@@ -123,7 +117,7 @@ const CreativeTeam: React.FC = () => {
         </div>
 <hr className="border-gray-300 my-16" />
         <div className="my-16">
-          <h2 className={`text-3xl font-semibold text-center uppercase mb-10 ${protestRiot.className}`}>
+          <h2 className="protest-riot text-3xl font-semibold text-center uppercase mb-10">
             Production Team
           </h2>
           <div className="grid gap-10 md:grid-cols-2">
@@ -149,7 +143,7 @@ const CreativeTeam: React.FC = () => {
                         width={120}
                         height={120}
                         quality={100}
-                        className="float-right ml-6 mb-4 border-2 border-gray-200 aspect-square object-cover object-top w-28 h-28 rounded-full shadow-sm"
+                        className="float-right ml-6 mb-4 border-2 border-teamm-gold/40 aspect-square object-cover object-top w-28 h-28 rounded-full shadow-sm"
                       />
                       <p className="whitespace-pre-line text-base">{member.bio}</p>
                     </div>
@@ -161,19 +155,11 @@ const CreativeTeam: React.FC = () => {
         </div>
 
        <hr className="border-gray-300 my-16" />
-        <div className="mt-24 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className={`text-3xl font-semibold text-center uppercase ${protestRiot.className}`}>
-          Cast & Crew
-        </motion.h1>          
-        <p className="text-black/80 text-lg">
-            Additional designers and production team to be announced in{' '}
-            <span className="text-teamm-gold font-semibold">February 2025</span>.
-          </p>
-        </div>
+        <CrossPageCallout
+          href="/about/cast"
+          buttonLabel="Meet the Cast"
+          description="See the performers bringing Team M to life on stage."
+        />
       </div>
     </section>
   );

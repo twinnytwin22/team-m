@@ -38,7 +38,7 @@ function TeamMHero() {
       style={{ backgroundImage: "url('/reamm-bg-full_1@4x.png')" }}
     >
       {/* Subtle gradient overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-black/50" />
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl">
@@ -60,7 +60,7 @@ function TeamMHero() {
           initial="hidden"
           animate="visible"
           variants={textVariants}
-          className="text-lg md:text-2xl max-w-2xl mx-auto mb-10 uppercase font-black drop-shadow-lg"
+          className="text-lg md:text-2xl max-w-2xl mx-auto mb-10 uppercase font-black tracking-wider drop-shadow-lg"
         >
           A new musical <br />by <span className="text-xl md:text-3xl">Phil Woodmore</span>
         </motion.p>

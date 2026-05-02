@@ -1,19 +1,19 @@
-import React from 'react';
-export const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <a
-    href={href}
-    className="text-white duration-200 ease-in-out font-oswald uppercase tracking-wide font-semibold hover:underline underline-offset-5 decoration-3"
-  >
-    {children}
-  </a>
-);
+'use client';
 
-export const MobileNavLink = ({ href, onClick, children }: { href: string; onClick: () => void; children: React.ReactNode }) => (
-  <a
-    href={href}
-    onClick={onClick}
-    className="text-teamm-gold hover:text-white transition-colors duration-200 font-montserrat uppercase tracking-wide font-medium block py-1"
-  >
-    {children}
-  </a>
-);
+import React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+export const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
+  return (
+    <Link
+      href={href}
+      className={`text-white duration-200 ease-in-out uppercase tracking-wide font-semibold hover:underline underline-offset-5 decoration-3 ${isActive ? 'underline underline-offset-5 decoration-3' : ''}`}
+    >
+      {children}
+    </Link>
+  );
+};

@@ -76,7 +76,7 @@ export default function ContactPage() {
                 <MessageSquare className="h-8 w-8 text-teamm-green" />
               </div>
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center font-oswald uppercase tracking-wide">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center uppercase tracking-wide">
               {success ? "Thank you for reaching out!" : "Contact Us"}
             </h2>
             <p className="text-white/80 mb-6 text-center font-crimson text-lg">
@@ -167,7 +167,7 @@ export default function ContactPage() {
                 )}
                 <Button
                   type="submit"
-                  className="bg-teamm-gold hover:bg-teamm-gold/90 text-black font-oswald uppercase tracking-wider w-full"
+                  className="bg-teamm-gold hover:bg-teamm-gold/90 text-black uppercase tracking-wider w-full"
                   disabled={loading}
                 >
                   {loading ? 'Sending...' : 'Send Message'}
