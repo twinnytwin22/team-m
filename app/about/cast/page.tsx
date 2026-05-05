@@ -20,7 +20,7 @@ const castMembers = [
   { name: 'Rose', title: 'De-Rance Blaylock', image: '/headshots/rose.jpg' },
   { name: 'Maria', title: 'Dorrian Neymour', image: '/headshots/maria.jpg' },
   { name: 'Linda', title: 'Nikki Daluga-Guenther', image: '/headshots/linda.jpg' },
-  { name: 'Ashley', title: 'Nikki Prodses', image: '/headshots/ashley.jpg' },
+  { name: 'Ashley', title: 'Nikki Prodes', image: '/headshots/ashley.jpg' },
   { name: 'Forrest', title: 'Langston Casey', image: '/headshots/forrest.jpg' },
   { name: 'Sofi', title: 'Sarah Hopp', image: '/headshots/sofi.jpeg' },
   { name: 'Bruce', title: 'Duane Foster', image: '/headshots/bruce.jpg' },
