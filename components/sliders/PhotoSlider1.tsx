@@ -71,7 +71,7 @@ function PhotoSlider1({
                   priority={idx === 0}
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 92vw, 1200px"
                   className={cn(
-                    'h-[220px] w-full object-cover sm:h-[260px] lg:h-[280px] xl:h-[300px]',
+                    'h-[220px] w-full object-cover sm:h-65 lg:h-70 xl:h-75',
                     imageClassName
                   )}
                 />
