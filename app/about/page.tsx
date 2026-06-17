@@ -1,126 +1,66 @@
-'use client';
+import LandingPageHeader from "@/components/LandingPageHeader";
+import ProductionGallery from "@/components/ProductionGallery";
+import SocialRow from "@/components/SocialRow";
 
-import React from 'react';
-import { motion, Variants } from 'framer-motion';
-import { ParallaxProvider } from 'react-scroll-parallax';
-import LandingPageHeader from '@/components/LandingPageHeader';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import PhotoGallery from '@/components/PhotoGallery';
-import SocialRow from '@/components/SocialRow';
-
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
-};
-
-const stats = [
-  { value: '4+', label: 'Years in Development' },
-  { value: '15+', label: 'Workshops & Readings' },
-  { value: '10+', label: 'Collaborators' },
-  { value: 'May 2026', label: 'World Premiere' },
+const details = [
+  "Original music, lyrics, and book by Dr. Philip A. Woodmore",
+  "Themes of grief, identity, mental health, and healing",
+  "Recommended for ages 11 and up",
 ];
 
-const testimonials = [
-  {
-    quote: `Witnessing Team M come to fruition has been has been nothing short of amazing. As the mental health consultant, I've been honored to watch this grow from an idea to a beautiful work of art. I'm excited for the world to experience this transformational musical!`,
-    author: 'De-Andrea Blaylock-Solar'
-  },
-  {
-    quote: `The road Team M actualized has been an example of the research and responsibility  that is crucial to tell the story in fullness and truth.  Dr. Woodmore was intentional about integrating voices, professionals and community to ensure the material is grounded in visibility , awareness and support.`,
-    author: 'Jacqueline Thompson'
-  },
-];
-
-export default function PhilStory() {
+export default function AboutPage() {
   return (
-    <ParallaxProvider>
-      <div className="bg-white text-gray-900">
-        {/* Header Overlay */}
-        <LandingPageHeader title="About Team M." />
+    <div className="bg-[#f8f5ee] text-[#151812]">
+      <LandingPageHeader title="About Team M." />
 
-        {/* Main Content */}
-        <main className="max-w-7xl mx-auto px-6 py-20 space-y-20 text-lg">
+      <main className="mx-auto max-w-7xl space-y-16 px-6 py-16 sm:px-8 lg:px-10">
+        <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <article className="rounded-[2rem] border border-black/10 bg-white p-8 shadow-[0_18px_60px_rgba(0,0,0,0.06)]">
+            <h1 className="text-3xl font-black uppercase tracking-tight sm:text-4xl">
+              Team M is a new musical set in a weekly support group in Macey, Indiana.
+            </h1>
+            <div className="mt-6 space-y-6 text-base leading-8 text-black/72 sm:text-lg">
+              <p>
+                Nine people gather in a church basement, each carrying their own history, grief, and
+                questions about healing. As the sessions continue, the connections between them become
+                harder to ignore.
+              </p>
+              <p>
+                With a score shaped by gospel, pop, rock, and musical theater, Team M explores mental
+                health, identity, and community in a way that stays personal and human.
+              </p>
+              <p>
+                Team M continues to move forward while remaining grounded in the work on stage and
+                in the room.
+              </p>
+            </div>
+          </article>
 
-          {/* Timeline & Stats */}
-          <div className="grid md:grid-cols-2 gap-16">
-            {/* Timeline */}
-            <div className="relative">
-              <div className="absolute left-4 top-0 bottom-0 w-1 bg-teamm-gold" />
-              <div className="space-y-8 pl-10">
-                <p>
-                  <strong>Team M</strong> is a new musical by Dr. Philip Woodmore, inviting audiences to a weekly support group meeting in Macey, Indiana. Nine individuals gather under the guidance of their leader and community to explore wellness. Through powerful songs and stories, the musical addresses mental health, the mental health industry, and broader issues of race, identity, and inclusion. Join us for this week&apos;s Team M group session&mdash;where no challenge is too small and every voice matters.
-                </p>
-                <ul className="list-disc pl-6 text-gray-700 space-y-1">
-                  <li>
-                    <strong>Content Transparency:</strong> Mature language, depictions of violence, and mental health topics. Recommended for ages 11+.
-                  </li>
-                  <li>
-                    <strong>Run Time:</strong> 2.5 hours
-                  </li>
-                </ul>
+          <aside className="rounded-[2rem] border border-black/10 bg-[#151812] p-8 text-white shadow-[0_18px_60px_rgba(0,0,0,0.12)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-teamm-gold">
+              Details
+            </p>
+            <ul className="mt-6 space-y-4 text-base leading-8 text-white/76">
+              {details.map((detail) => (
+                <li key={detail}>{detail}</li>
+              ))}
+            </ul>
+
+            <div className="mt-8 border-t border-white/10 pt-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-teamm-gold">
+                Follow
+              </p>
+              <div className="mt-4">
+                <SocialRow iconColor="white" />
               </div>
             </div>
-
-            {/* Stats */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeUp}
-              className="grid grid-cols-2 gap-8 text-center bg-teamm-green/5 rounded-xl p-8"
-            >
-              {stats.map((s, idx) => (
-                <div key={idx}>
-                  <p className="text-3xl font-extrabold text-teamm-gold border-b-2 border-teamm-gold pb-2 mb-2">{s.value}</p>
-                  <p className="uppercase tracking-wide text-gray-600 text-sm">{s.label}</p>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-
-          <hr className="border-teamm-gold/30" />
-
-          <div className="gap-4 flex flex-col">
-            <h2 className="protest-riot text-2xl font-semibold text-center uppercase">Follow Our Journey</h2>
-            <SocialRow />
-            <PhotoGallery />
-          </div>
-
-          <hr className="border-teamm-gold/30" />
-
-          {/* Testimonials */}
-          <motion.section
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            className="space-y-8"
-          >
-            <h2 className="protest-riot text-2xl font-semibold text-center uppercase">Praise &amp; Reviews</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {testimonials.map((t, idx) => (
-                <blockquote key={idx} className="bg-white border-l-4 border-teamm-gold p-8 rounded-r-lg shadow-md">
-                  <p className="italic text-gray-700">&ldquo;{t.quote}&rdquo;</p>
-                  <footer className="mt-4 text-right font-semibold text-gray-900 uppercase tracking-wide text-sm">&mdash; {t.author}</footer>
-                </blockquote>
-              ))}
-            </div>
-          </motion.section>
-        </main>
-
-        {/* Call To Action */}
-        <section className="py-20 bg-teamm-green text-white text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-montserrat uppercase">Be Part of the Story</h2>
-          <p className="mb-8">Reserve your seat now for the world premiere of <em>Team M</em> in May 2026.</p>
-          <Button className="mt-6 bg-teamm-gold hover:bg-teamm-gold/90 text-black uppercase tracking-wider text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-            <Link target="_blank" href="https://www.cocastl.org/calendar/team-m">
-              Reserve Tickets
-            </Link>
-          </Button>
+          </aside>
         </section>
-      </div>
-    </ParallaxProvider>
+
+        <section>
+          <ProductionGallery limit={3} showHeader={false} />
+        </section>
+      </main>
+    </div>
   );
 }

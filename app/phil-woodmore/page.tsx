@@ -83,11 +83,11 @@ const PhilStory: React.FC = () => {
               <br />
 
               <p>
-                Now, I am thrilled to share &quot;Team M&quot; with the world—a story born out of mentorship, community, and a deep belief in the power of storytelling to change lives.
+                Now, after the first production has met an audience, I am even more grateful to share &quot;Team M&quot; with the world. It remains a story born out of mentorship, community, and a deep belief in the power of storytelling to change lives.
               </p>
 
-              <div className="mt-10 text-right text-gray950 text-xl font-semibold">
-                See you in May 2026.
+              <div className="mt-10 text-right text-gray-950 text-xl font-semibold">
+                Thank you for being part of the first chapter.
               </div>
             </CardContent>
           </Card>

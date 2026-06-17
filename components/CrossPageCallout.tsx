@@ -22,7 +22,7 @@ const CrossPageCallout: React.FC<CrossPageCalloutProps> = ({ href, buttonLabel, 
       >
         <Link
           href={href}
-          className="inline-flex items-center justify-center bg-teamm-gold hover:bg-teamm-gold/90 text-black font-oswald uppercase tracking-wider font-bold px-8 py-3 rounded-md shadow-md hover:shadow-lg transition-all duration-200"
+          className="inline-flex items-center justify-center rounded-md bg-teamm-gold px-8 py-3 text-sm font-bold uppercase tracking-[0.18em] text-black shadow-md transition-all duration-200 hover:bg-teamm-gold/90 hover:shadow-lg"
         >
           {buttonLabel}
         </Link>

@@ -1,98 +1,102 @@
-import React from "react";
+import Link from "next/link";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import Image from "next/image";
-import { NavLink } from "./navlink";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+
+import { NavLink } from "./navlink";
+
+const currentYear = new Date().getFullYear();
 
 function Footer() {
   return (
-    <footer className="bg-black text-white pt-12 px-5 pb-12">
-      <div className="max-w-5xl mx-auto flex flex-col lg:flex-row gap-y-8 lg:gap-y-0 lg:justify-between">
-        {/* First column: Navigation Links */}
-        <div className="flex-1 space-y-2 text-center lg:text-left lg:space-x-4 text-sm md:text-base">
-          <ul className="space-y-2">
-            <li className="py-1">
+    <footer className="bg-[#0f110d] px-6 pb-12 pt-16 text-white sm:px-8 lg:px-10">
+      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_0.8fr_1.2fr]">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-teamm-gold">Navigate</p>
+          <ul className="mt-5 space-y-3">
+            <li>
               <NavLink href="/">Home</NavLink>
             </li>
-            <li className="py-1">
+            <li>
+              <NavLink href="/gallery">Gallery</NavLink>
+            </li>
+            <li>
               <NavLink href="/about">About</NavLink>
             </li>
-            <li className="py-1">
-              <NavLink href="/about/creative-team">The Team</NavLink>
+            <li>
+              <NavLink href="/about/cast">The Cast</NavLink>
             </li>
           </ul>
         </div>
 
-        {/* Second column: Additional Navigation Links */}
-        <div className="flex-1 space-y-2 text-center lg:text-left lg:space-x-4 text-sm md:text-base">
-          <nav>
-            <ul className="list-none p-0 space-y-2">
-              <li className="py-1">
-                <NavLink href="/phil-woodmore">Phil Woodmore</NavLink>
-              </li>
-              <li className="py-1">
-                <NavLink href="/blog">Blog</NavLink>
-              </li>
-              <li className="py-1">
-                <NavLink href="/contact">Contact</NavLink>
-              </li>
-            </ul>
-          </nav>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-teamm-gold">Explore</p>
+          <ul className="mt-5 space-y-3">
+            <li>
+              <NavLink href="/about/creative-team">Creative Team</NavLink>
+            </li>
+            <li>
+              <NavLink href="/phil-woodmore">Phil Woodmore</NavLink>
+            </li>
+            <li>
+              <NavLink href="/contact">Contact</NavLink>
+            </li>
+            <li>
+              <NavLink href="/blog">Blog</NavLink>
+            </li>
+          </ul>
         </div>
 
-        {/* Third column: Logo and Social Icons */}
-        <div className="flex-1 text-center text-2xl">
-          <div className="mb-5">
-            <Image
-              src="/teamm-logo-full@2x.png"
-              alt="Logo"
-              width={500}
-              height={300}
-              className="w-md lg:w-full px-10 mx-auto"
-            />
-          </div>
+        <div className="lg:pl-8">
+          <Image
+            src="/teamm-logo-full@2x.png"
+            alt="Team M"
+            width={500}
+            height={160}
+            className="w-full max-w-md"
+          />
+          <p className="mt-6 max-w-xl text-base leading-8 text-white/65">
+            Team M is a new musical by Dr. Philip A. Woodmore exploring grief, healing, identity, and
+            community through a contemporary original score.
+          </p>
+
           <Tooltip.Provider delayDuration={100}>
-            <div className="flex items-center justify-center gap-4">
+            <div className="mt-6 flex items-center gap-4 text-2xl">
               <Tooltip.Root>
                 <Tooltip.Trigger asChild>
-                  <NavLink href="https://www.facebook.com/profile.php?id=61576144800633">
+                  <Link
+                    href="https://www.facebook.com/profile.php?id=61576144800633"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition hover:text-teamm-gold"
+                  >
                     <FaFacebook />
-                  </NavLink>
+                  </Link>
                 </Tooltip.Trigger>
                 <Tooltip.Content
                   side="top"
                   sideOffset={5}
-                  className="bg-gray-800 text-white p-1 rounded shadow-lg text-xs"
+                  className="rounded bg-gray-800 p-1 text-xs text-white shadow-lg"
                 >
                   Facebook
                 </Tooltip.Content>
               </Tooltip.Root>
 
-              {/* <Tooltip.Root>
-                <Tooltip.Trigger asChild>
-                  <NavLink href="https://twitter.com">
-                    <PiXLogo />
-                  </NavLink>
-                </Tooltip.Trigger>
-                <Tooltip.Content
-                  side="top"
-                  sideOffset={5}
-                  className="bg-gray-800 text-white p-1 rounded shadow-lg text-xs"
-                >
-                  Twitter
-                </Tooltip.Content>
-              </Tooltip.Root> */}
-
               <Tooltip.Root>
                 <Tooltip.Trigger asChild>
-                  <NavLink href="https://www.instagram.com/teammthemusical/">
+                  <Link
+                    href="https://www.instagram.com/teammthemusical/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition hover:text-teamm-gold"
+                  >
                     <FaInstagram />
-                  </NavLink>
+                  </Link>
                 </Tooltip.Trigger>
                 <Tooltip.Content
                   side="top"
                   sideOffset={5}
-                  className="bg-gray-800 text-white p-1 rounded shadow-lg text-xs"
+                  className="rounded bg-gray-800 p-1 text-xs text-white shadow-lg"
                 >
                   Instagram
                 </Tooltip.Content>
@@ -101,9 +105,10 @@ function Footer() {
           </Tooltip.Provider>
         </div>
       </div>
-      <div className="max-w-5xl mx-auto mt-10 pt-6 border-t border-white/10 text-center">
-        <p className="text-xs text-white/50 font-montserrat">
-          &copy; 2026 Team M: A New Musical. All rights reserved.
+
+      <div className="mx-auto mt-12 max-w-7xl border-t border-white/10 pt-6 text-center">
+        <p className="text-xs font-montserrat text-white/45">
+          &copy; {currentYear} Team M: A New Musical. All rights reserved.
         </p>
       </div>
     </footer>

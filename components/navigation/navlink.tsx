@@ -11,7 +11,7 @@ export const NavLink = ({ href, children }: { href: string; children: React.Reac
   return (
     <Link
       href={href}
-      className={`text-white duration-200 ease-in-out uppercase tracking-wide font-semibold hover:underline underline-offset-5 decoration-3 ${isActive ? 'underline underline-offset-5 decoration-3' : ''}`}
+      className={`text-sm font-semibold uppercase tracking-[0.14em] text-white transition duration-200 ease-in-out hover:underline underline-offset-4 decoration-2 ${isActive ? "underline underline-offset-4 decoration-2" : ""}`}
     >
       {children}
     </Link>

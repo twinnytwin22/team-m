@@ -4,6 +4,33 @@
 
 @layer base {
   :root {
+    --background: 42 33% 96%;
+    --foreground: 84 13% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 84 13% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 84 13% 9%;
+    --primary: 142 100% 28%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 42 24% 92%;
+    --secondary-foreground: 84 13% 9%;
+    --muted: 42 24% 92%;
+    --muted-foreground: 84 8% 35%;
+    --accent: 36 93% 54%;
+    --accent-foreground: 84 13% 9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 84 10% 84%;
+    --input: 84 10% 84%;
+    --ring: 36 93% 54%;
+    --sidebar-background: 142 79% 31%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 36 93% 54%;
+    --sidebar-primary-foreground: 84 13% 9%;
+    --sidebar-accent: 142 47% 21%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 142 47% 21%;
+    --sidebar-ring: 36 93% 54%;
     --teamm-green: #00913f;
     --teamm-green-mid: #106e39;
     --teamm-green-dark: #0d4024;
@@ -11,12 +38,22 @@
     --teamm-gold-light: #f7ae1d;
     --teamm-black: #000000;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  min-height: 100vh;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
   font-family: var(--font-montserrat), Helvetica, sans-serif;
+}
+
+::selection {
+  background: rgba(247, 148, 29, 0.24);
+  color: #151812;
 }
 
 @layer utilities {

@@ -16,9 +16,21 @@
   </url>
 
   <url>
-    <loc>https://www.teammthemusical.com/about/team</loc>
+    <loc>https://www.teammthemusical.com/gallery</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.teammthemusical.com/about/cast</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.teammthemusical.com/about/creative-team</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>

@@ -1,7 +1,7 @@
 import React from 'react'
 import * as Tooltip from "@radix-ui/react-tooltip";
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
-import { NavLink } from './navigation/navlink';
+import Link from 'next/link';
 
 type SocialRowProps = {
   iconColor?: string
@@ -13,9 +13,13 @@ function SocialRow({ iconColor = "green" }: SocialRowProps) {
       <div className="flex items-center justify-center gap-4">
         <Tooltip.Root>
           <Tooltip.Trigger asChild>
-            <NavLink href="https://www.facebook.com/profile.php?id=61576144800633">
+            <Link
+              href="https://www.facebook.com/profile.php?id=61576144800633"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebook color={iconColor} />
-            </NavLink>
+            </Link>
           </Tooltip.Trigger>
           <Tooltip.Content
             side="top"
@@ -28,9 +32,13 @@ function SocialRow({ iconColor = "green" }: SocialRowProps) {
 
         <Tooltip.Root>
           <Tooltip.Trigger asChild>
-            <NavLink href="https://www.instagram.com/teammthemusical/">
+            <Link
+              href="https://www.instagram.com/teammthemusical/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram color={iconColor} />
-            </NavLink>
+            </Link>
           </Tooltip.Trigger>
           <Tooltip.Content
             side="top"

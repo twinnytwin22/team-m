@@ -1,7 +1,8 @@
-'use client'
-import { Button } from "@/components/ui/button";
-import { MessageSquare } from "lucide-react";
+"use client";
+
 import { useState } from "react";
+
+import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 
 const Newsletter = () => {
@@ -32,8 +33,8 @@ const Newsletter = () => {
 
       if (res.ok) {
         toast({
-          title: "Success!",
-          description: "You've been added to our mailing list.",
+          title: "Success",
+          description: "You're on the list for future Team M updates.",
         });
         setEmail("");
         setSuccess(true);
@@ -57,45 +58,35 @@ const Newsletter = () => {
   };
 
   return (
-    <section id="updates" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto bg-teamm-green rounded-lg overflow-hidden shadow-2xl">
-          <div className="p-8 md:p-12">
-            <div className="flex justify-center mb-6">
-              <div className="bg-white p-4 rounded-full">
-                <MessageSquare className="h-8 w-8 text-teamm-green" />
-              </div>
-            </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center uppercase tracking-wide">
-              {success ? "Thank you for signing up!" : "Stay Updated"}
-            </h2>
-            <p className="text-white/80 mb-6 text-center font-crimson text-lg">
-              {success
-                ? "You'll receive exclusive updates, behind-the-scenes content, and early access to tickets."
-                : "Join our mailing list for exclusive updates, behind-the-scenes content, and early access to tickets."}
-            </p>
-            {!success && (
-              <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="grow bg-white font-montserrat rounded px-4 py-2"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  disabled={loading}
-                  required
-                />
-                <Button
-                  type="submit"
-                  className="bg-teamm-gold hover:bg-teamm-gold/90 text-black uppercase tracking-wider font-bold"
-                  disabled={loading}
-                >
-                  {loading ? "Subscribing..." : "Subscribe"}
-                </Button>
-              </form>
-            )}
-          </div>
-        </div>
+    <section id="updates" className="bg-[#f8f5ee] px-6 py-16 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-4xl rounded-[2rem] border border-black/10 bg-white p-8 text-[#151812] shadow-[0_18px_60px_rgba(0,0,0,0.06)] sm:p-10">
+        <h2 className="text-3xl font-black uppercase tracking-tight sm:text-4xl">Stay updated</h2>
+        <p className="mt-4 text-base leading-8 text-black/70 sm:text-lg">
+          {success
+            ? "You're subscribed. Future Team M updates will come straight to your inbox."
+            : "Join the mailing list for future productions and major updates."}
+        </p>
+
+        {!success && (
+          <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="min-h-14 grow rounded-full border border-black/10 bg-white px-5 font-montserrat text-[#151812] outline-none placeholder:text-black/40 focus:border-teamm-green"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              disabled={loading}
+              required
+            />
+            <Button
+              type="submit"
+              className="min-h-14 rounded-full bg-teamm-gold px-8 text-sm font-bold uppercase tracking-[0.18em] text-black hover:bg-[#ffb44c]"
+              disabled={loading}
+            >
+              {loading ? "Subscribing..." : "Subscribe"}
+            </Button>
+          </form>
+        )}
       </div>
     </section>
   );

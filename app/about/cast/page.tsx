@@ -33,20 +33,6 @@ const CreativeTeam: React.FC = () => {
       <LandingPageHeader title="The Cast" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-16">
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="bg-white border border-gray-200 rounded-md shadow-md p-6 sm:p-8 mb-12"
-        >
-          <p className="font-oswald uppercase tracking-[0.2em] text-xs sm:text-sm text-teamm-gold">World Premiere</p>
-          <h2 className="protest-riot text-4xl sm:text-5xl text-teamm-green uppercase mt-2">Cast and Characters</h2>
-          <p className="mt-4 text-black/80 max-w-2xl text-base sm:text-lg">
-            Meet the performers bringing Team M to life on stage.
-          </p>
-        </motion.div> */}
-
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {castMembers.map((member, i) => (
             <motion.div
@@ -70,8 +56,8 @@ const CreativeTeam: React.FC = () => {
               </div>
 
               <div className="mt-4 space-y-1">
-                <p className="font-oswald uppercase tracking-wider text-xs text-teamm-gold">Character</p>
-                <h3 className="font-oswald text-2xl text-gray-900 uppercase tracking-wide leading-tight">{member.name}</h3>
+                <p className="font-montserrat uppercase tracking-[0.18em] text-xs font-semibold text-teamm-gold">Character</p>
+                <h3 className="text-2xl font-black uppercase tracking-wide leading-tight text-gray-900">{member.name}</h3>
                 <p className="text-black/60 text-xs uppercase tracking-[0.18em]">Performed By</p>
                 <p className="text-base text-gray-800 font-semibold">{member.title}</p>
               </div>
