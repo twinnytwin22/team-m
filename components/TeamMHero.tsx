@@ -8,7 +8,7 @@ function TeamMHero() {
     <section className="relative flex min-h-[calc(100svh-5rem)] items-center justify-center overflow-hidden bg-[#0e120c] px-6 py-16 text-white sm:px-8 lg:px-10">
       <div className="absolute inset-0">
         <Image
-          src="/reamm-bg-full_1@4x.png"
+          src="/FIR01385.jpg"
           alt=""
           fill
           priority
@@ -23,7 +23,7 @@ function TeamMHero() {
           alt="Team M"
           width={620}
           height={190}
-          className="mx-auto h-auto w-full max-w-[22rem] drop-shadow-[0_18px_44px_rgba(0,0,0,0.45)] sm:max-w-[28rem]"
+          className="mx-auto h-auto w-full max-w-88 drop-shadow-[0_18px_44px_rgba(0,0,0,0.45)] sm:max-w-[28rem]"
         />
 
         <p className="mt-8 text-lg font-black uppercase tracking-[0.18em] text-white sm:text-2xl">
