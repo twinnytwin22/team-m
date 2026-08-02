@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Mail } from "lucide-react";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { NavLink } from "./navlink";
@@ -19,8 +21,7 @@ const desktopRoutes = [
     ],
   },
   { href: "/phil-woodmore", label: "Phil Woodmore" },
-   { href: "/gallery", label: "Gallery" },
-  { href: "/contact", label: "Contact" },
+  { href: "/gallery", label: "Gallery" },
 ];
 
 const mobileRoutes = [
@@ -30,7 +31,6 @@ const mobileRoutes = [
   { href: "/about/cast", label: "The Cast", nested: true },
   { href: "/about/creative-team", label: "Creative Team", nested: true },
   { href: "/phil-woodmore", label: "Phil Woodmore" },
-  { href: "/contact", label: "Contact" },
 ];
 
 function Header() {
@@ -98,7 +98,34 @@ function Header() {
           </nav>
         </div>
 
-        <div className="md:hidden">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <Link
+            href="https://www.facebook.com/teammthemusical/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full p-2 text-white transition hover:bg-white/10 hover:text-teamm-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-teamm-gold"
+            aria-label="Follow Team M on Facebook"
+          >
+            <FaFacebook className="h-5 w-5" aria-hidden="true" />
+          </Link>
+          <Link
+            href="https://www.instagram.com/teammthemusical/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full p-2 text-white transition hover:bg-white/10 hover:text-teamm-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-teamm-gold"
+            aria-label="Follow Team M on Instagram"
+          >
+            <FaInstagram className="h-5 w-5" aria-hidden="true" />
+          </Link>
+          <Link
+            href="/contact"
+            className="rounded-full p-2 text-white transition hover:bg-white/10 hover:text-teamm-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-teamm-gold"
+            aria-label="Contact Team M"
+          >
+            <Mail className="h-5 w-5" aria-hidden="true" />
+          </Link>
+
+          <div className="md:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
               className="text-white focus:outline-none"
@@ -132,6 +159,7 @@ function Header() {
               </nav>
             </SheetContent>
           </Sheet>
+          </div>
         </div>
       </div>
     </header>

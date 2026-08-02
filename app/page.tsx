@@ -16,11 +16,11 @@ export default function Home() {
     <div className="bg-[#f8f5ee]">
       <TeamMHero />
 
-      <section className="grid bg-white xl:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+      <section className="grid bg-white lg:grid-cols-2">
         <div className="flex items-center px-6 py-8 sm:px-10 lg:px-14 xl:px-[max(3.5rem,calc((100vw-80rem)/2))]">
           <div className="max-w-2xl">
        
-            <h1 className="mt-4 text-3xl font-black uppercase leading-tight tracking-tight text-[#151812] sm:text-2xl">
+            <h1 className="mt-4 text-3xl font-black uppercase leading-tight tracking-tight text-[#151812] sm:text-xl">
               A new musical set in a weekly support group in Macey, Indiana.
             </h1>
             <div className="mt-6 space-y-5 text-base leading-6 text-black/72 sm:text-sm">

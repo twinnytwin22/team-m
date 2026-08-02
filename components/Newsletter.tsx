@@ -59,8 +59,8 @@ const Newsletter = () => {
 
   return (
     <section id="updates" className="bg-[#f8f5ee] px-6 py-16 sm:px-8 lg:px-10">
-      <div className="mx-auto max-w-4xl rounded-[2rem] border border-black/10 bg-white p-8 text-[#151812] shadow-[0_18px_60px_rgba(0,0,0,0.06)] sm:p-10">
-        <h2 className="text-3xl font-black uppercase tracking-tight sm:text-4xl">Stay updated</h2>
+      <div className="mx-auto max-w-4xl rounded-[2rem] border border-black/10 bg-white p-8 text-[#151812] shadow-[0_18px_60px_rgba(0,0,0,0.06)] sm:pb-10">
+        <h2 className="text-3xl font-black uppercase tracking-tight sm:text-2xl">Stay updated</h2>
         <p className="mt-4 text-base leading-8 text-black/70 sm:text-lg">
           {success
             ? "You're subscribed. Future Team M updates will come straight to your inbox."

@@ -20,9 +20,9 @@ function Footer() {
             <li>
               <NavLink href="/gallery">Gallery</NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink href="/about">About</NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink href="/about/cast">The Cast</NavLink>
             </li>
@@ -41,9 +41,9 @@ function Footer() {
             <li>
               <NavLink href="/contact">Contact</NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink href="/blog">Blog</NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
 

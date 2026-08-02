@@ -9,8 +9,8 @@ const featuredMedia = {
 
 export default function InTheNews() {
   return (
-    <section aria-labelledby="in-the-news-heading" className="px-6 py-12 sm:px-8 lg:px-10">
-      <div className="mx-auto max-w-6xl border-t border-black/15 pt-8">
+    <section aria-labelledby="in-the-news-heading" className="px-6 mt-16 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-6xl border-b border-black/15 pb-12">
         <div className="grid gap-6 lg:grid-cols-[12rem_minmax(0,1fr)] lg:gap-10">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-teamm-green">

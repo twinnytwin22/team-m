@@ -47,11 +47,11 @@ export default function TeamMVideo() {
   };
 
   return (
-    <div className="group relative aspect-[4/3] w-full self-start overflow-hidden bg-[#151812] 2xl:aspect-video">
+    <div className="group relative aspect-video md:aspect-4/3 w-full self-start overflow-hidden bg-[#151812] xl:aspect-video">
       <video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover aspect-video"
-        poster="/og-image.jpg"
+        className="absolute inset-0 h-full w-full object-cover"
+        poster="/FIR00656.jpg"
         preload="none"
         playsInline
         muted
@@ -66,16 +66,16 @@ export default function TeamMVideo() {
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10" />
 
-      <button
+     {!isPlaying &&  <button
         type="button"
         onClick={togglePlayback}
         className="absolute inset-0 flex items-center justify-center focus:outline-none focus-visible:ring-4 focus-visible:ring-teamm-gold"
         aria-label={isPlaying ? "Pause Team M film" : "Play Team M film"}
       >
         <span className="flex h-20 w-20 items-center justify-center rounded-full bg-teamm-gold text-[#151812] shadow-xl transition-transform duration-200 group-hover:scale-110">
-          {isPlaying ? <Pause className="h-8 w-8 fill-current" /> : <Play className="ml-1 h-8 w-8 fill-current" />}
+          <Play className="ml-1 h-8 w-8 fill-current" />
         </span>
-      </button>
+      </button>}
 
       <div className="absolute inset-x-0 bottom-0 flex items-center gap-3 p-5 text-white sm:p-6">
         <button
