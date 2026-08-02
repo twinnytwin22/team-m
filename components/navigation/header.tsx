@@ -21,12 +21,12 @@ const desktopRoutes = [
     ],
   },
   { href: "/phil-woodmore", label: "Phil Woodmore" },
-  { href: "/gallery", label: "Gallery" },
+  // { href: "/gallery", label: "Gallery" },
 ];
 
 const mobileRoutes = [
   { href: "/", label: "Home" },
-  { href: "/gallery", label: "Gallery" },
+  // { href: "/gallery", label: "Gallery" },
   { href: "#about", label: "Cast & Creative" },
   { href: "/about/cast", label: "The Cast", nested: true },
   { href: "/about/creative-team", label: "Creative Team", nested: true },

@@ -17,9 +17,9 @@ function Footer() {
             <li>
               <NavLink href="/">Home</NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink href="/gallery">Gallery</NavLink>
-            </li>
+            </li> */}
             {/* <li>
               <NavLink href="/about">About</NavLink>
             </li> */}
