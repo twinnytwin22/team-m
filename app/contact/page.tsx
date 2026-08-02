@@ -69,7 +69,7 @@ export default function ContactPage() {
     <section className="pb-20 bg-white min-h-screen flex items-center flex-col">
         <LandingPageHeader title="Contact Us" />
       <div className="container mx-auto px-4 py-24">
-        <div className="max-w-2xl mx-auto bg-teamm-green rounded-lg overflow-hidden shadow-2xl">
+        <div className="max-w-2xl mx-auto bg-[rgba(26,111,64,0.92)]  rounded-lg overflow-hidden shadow-2xl">
           <div className="p-8 md:p-12">
             <div className="flex justify-center mb-6">
               <div className="bg-white p-4 rounded-full">

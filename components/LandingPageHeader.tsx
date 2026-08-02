@@ -4,9 +4,13 @@ import React from 'react'
 
 function LandingPageHeader({ title }: { title: string }) {
     return (
-        <section className="bg-linear-to-b from-[#0d4024] via-[#106e39] to-[#00913f] py-28 px-6 md:px-12 w-full">
+        <section className="bg-[rgba(26,111,64,0.92)] py-28 px-6 md:px-12 w-full">
             <div className="w-full mx-auto">
                 <motion.h1
+          style={{
+  WebkitTextStroke: "1px black",
+  textShadow: "2px 2px 0 #000, 4px 4px 0 #000, 6px 6px 0 #000",
+}}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
