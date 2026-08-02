@@ -1,6 +1,6 @@
 "use client";
 
-import { Pause, Play, Volume2, VolumeX } from "lucide-react";
+import { Fullscreen, Pause, Play, Volume2, VolumeX } from "lucide-react";
 import { useRef, useState } from "react";
 
 const videoUrl = "https://pub-040a593b1a854c5dab5924d0e952ec8c.r2.dev/team-m-2k.mp4";
@@ -46,6 +46,12 @@ export default function TeamMVideo() {
     setCurrentTime(value);
   };
 
+  const goFullscreen = () => {
+    const video = videoRef.current
+    if(!video) return;
+    video.requestFullscreen()
+  }
+
   return (
     <div className="group relative aspect-video md:aspect-4/3 w-full self-start overflow-hidden bg-[#151812] xl:aspect-video">
       <video
@@ -64,7 +70,7 @@ export default function TeamMVideo() {
         <source src={videoUrl} type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-black/10" />
 
      {!isPlaying &&  <button
         type="button"
@@ -106,6 +112,14 @@ export default function TeamMVideo() {
           aria-label={isMuted ? "Unmute" : "Mute"}
         >
           {isMuted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
+        </button>
+         <button
+          type="button"
+          onClick={goFullscreen}
+          className="rounded-full p-2 transition hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-teamm-gold"
+          aria-label="Go Full Screen"
+        >
+          <Fullscreen className="h-5 w-5" />
         </button>
       </div>
     </div>
