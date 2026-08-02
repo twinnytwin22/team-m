@@ -3,6 +3,12 @@
 import { Fullscreen, Pause, Play, Volume2, VolumeX } from "lucide-react";
 import { useRef, useState } from "react";
 
+type IOSVideoElement = HTMLVideoElement & {
+  webkitEnterFullscreen?: () => void;
+  webkitExitFullscreen?: () => void;
+  webkitDisplayingFullscreen?: boolean;
+};
+
 const videoUrl = "https://pub-040a593b1a854c5dab5924d0e952ec8c.r2.dev/team-m-2k.mp4";
 
 function formatTime(time: number) {
@@ -46,11 +52,22 @@ export default function TeamMVideo() {
     setCurrentTime(value);
   };
 
-  const goFullscreen = () => {
-    const video = videoRef.current
-    if(!video) return;
-    video.requestFullscreen()
+const goFullscreen = async () => {
+  const video = videoRef.current as IOSVideoElement | null;
+  if (!video) return;
+
+  if (video.webkitDisplayingFullscreen) {
+    video.webkitExitFullscreen?.();
+    return;
   }
+
+  if (video.requestFullscreen) {
+    await video.requestFullscreen();
+    return;
+  }
+
+  video.webkitEnterFullscreen?.();
+};
 
   return (
     <div className="group relative aspect-video md:aspect-4/3 w-full self-start overflow-hidden bg-[#151812] xl:aspect-video">
