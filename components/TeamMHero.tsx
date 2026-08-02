@@ -10,6 +10,8 @@ import { Button } from "@/components/ui/button";
 const heroSlides = [
   { src: "/FIR01385.jpg", alt: "" },
   { src: "/FIR01305.jpg", alt: "" },
+  { src: "/FIR01346.jpg", alt: "" },
+  { src: "/FIR01352.jpg", alt: "" },
 ];
 
 const SLIDE_DURATION_MS = 6000;
