@@ -9,23 +9,24 @@ import { NavLink } from "./navlink";
 
 const desktopRoutes = [
   { href: "/", label: "Home" },
-  { href: "/gallery", label: "Gallery" },
+ 
   {
-    href: "/about",
-    label: "About",
+    href: "#about",
+    label: "Cast & Creative",
     children: [
       { href: "/about/cast", label: "The Cast" },
       { href: "/about/creative-team", label: "Creative Team" },
     ],
   },
   { href: "/phil-woodmore", label: "Phil Woodmore" },
+   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];
 
 const mobileRoutes = [
   { href: "/", label: "Home" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/about", label: "About" },
+  { href: "#about", label: "Cast & Creative" },
   { href: "/about/cast", label: "The Cast", nested: true },
   { href: "/about/creative-team", label: "Creative Team", nested: true },
   { href: "/phil-woodmore", label: "Phil Woodmore" },
@@ -62,12 +63,9 @@ function Header() {
               return (
                 <div key={route.href} className="group relative">
                   <div className="flex items-center space-x-1 text-white">
-                    <Link
-                      href={route.href}
-                      className="text-sm font-semibold uppercase tracking-[0.14em] transition hover:underline underline-offset-4 decoration-2"
-                    >
+                    <span className="text-sm font-semibold uppercase tracking-[0.14em]">
                       {route.label}
-                    </Link>
+                    </span>
                     <svg
                       className="h-4 w-4 transition-transform group-hover:rotate-180"
                       fill="none"
@@ -128,7 +126,7 @@ function Header() {
                     key={route.href}
                     className={route.nested ? "ml-4 border-l-2 border-teamm-gold pl-4" : ""}
                   >
-                    <NavLink href={route.href}>{route.label}</NavLink>
+                    {route.href === "#about" ? <span className="text-sm font-semibold uppercase tracking-[0.14em]">{route.label}</span> : <NavLink href={route.href}>{route.label}</NavLink>}
                   </div>
                 ))}
               </nav>

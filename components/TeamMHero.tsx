@@ -78,27 +78,27 @@ function TeamMHero() {
           alt="Team M"
           width={620}
           height={190}
-          className="mx-auto h-auto w-full max-w-88 drop-shadow-[0_18px_44px_rgba(0,0,0,0.45)] sm:max-w-[28rem]"
+          className="mx-auto h-auto w-full max-w-88 drop-shadow-[0_18px_44px_rgba(0,0,0,0.45)] sm:max-w-[20rem]"
         />
 
-        <p className="mt-8 text-lg font-black uppercase tracking-[0.18em] text-white sm:text-2xl">
+        <p className="mt-8 font-black uppercase tracking-[0.18em] text-white ">
           A new musical by Phil Woodmore
         </p>
 
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/78 sm:text-lg">
-          Nine people. One support group. A story of grief, healing, identity, and connection.
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-6 text-white/78 ">
+          Nine people. One support group.<br/> A story of grief, healing, identity, and connection.
         </p>
 
         <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-          <Button
+          {/* <Button
             asChild
             className="bg-teamm-gold px-6 py-6 text-sm font-bold uppercase tracking-[0.18em] text-black hover:bg-[#ffb44c]"
           >
             <Link href="/about">ABOUT TEAM M.</Link>
-          </Button>
+          </Button> */}
           <Button
             asChild
-            className="border border-white/15 bg-white/10 px-6 py-6 text-sm font-bold uppercase tracking-[0.18em] text-white hover:bg-white/15"
+            className="bg-teamm-gold px-6 py-6 text-sm font-bold uppercase tracking-[0.18em] text-black hover:bg-[#ffb44c]"
           >
             <Link href="/about/creative-team">Meet the Team</Link>
           </Button>
